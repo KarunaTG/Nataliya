@@ -194,9 +194,7 @@ Nᴀᴍᴇ - {}"""
 <b>🎗[@TVSeriesCW] [{file_name}🎗](https://t.me/+3cfeesNk_cg3MGQ9)
 
 <i>🔆 Mᴏᴠɪᴇs Gʀᴏᴜᴘ » [@HeavenOfMovies࿐•](https://t.me/+_HgfqNy7N4owNTI1)
-🔆 Sᴇʀɪᴇs Gʀᴏᴜᴘ » [@HeavenOfSeries࿐•](https://t.me/+UbT__2jSGfgzMGM1)
-
-</i> </b>"""
+🔆 Sᴇʀɪᴇs Gʀᴏᴜᴘ » [@HeavenOfSeries࿐•](https://t.me/+UbT__2jSGfgzMGM1) </i> </b>"""
 
     IMDB_TEMPLATE_TXT = """
 <b>Query: {query}
