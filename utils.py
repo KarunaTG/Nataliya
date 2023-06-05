@@ -655,8 +655,8 @@ async def send_all(bot, userid, files, ident):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                        InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-                        InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                        InlineKeyboardButton('Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url=MOVIE_GROUP),
+                        InlineKeyboardButton('Sᴇʀɪᴇs Gʀᴏᴜᴘ', url=SERIES_GROUP)
                     ],[
                         InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/MrperfectOffcial_bot")
                         ]
