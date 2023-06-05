@@ -19,7 +19,7 @@ BOT_TOKEN = environ.get('BOT_TOKEN', '')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
-USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
+USE_CAPTION_FILTER =  is_enabled (( environ . get ( 'USE_CAPTION_FILTER' , ' True ' )), True )
 
 PICS = (environ.get('PICS', 'https://telegra.ph/file/0049d801d29e83d68b001.jpg https://te.legra.ph/file/8193e2252b8c2bf564de3.jpg')).split()
 NOR_IMG = environ.get("NOR_IMG", "https://te.legra.ph/file/7b22c0b70c00db3106b2c.jpg")
@@ -47,7 +47,7 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Telegram_files")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
-IS_VERIFY = bool(environ.get('IS_VERIFY', True))
+IS_VERIFY =  is_enabled (( environ . get ( 'IS_VERIFY' , True ) ), True )
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/c/1845700490/3")
 VERIFY2_URL = environ.get('VERIFY2_URL', "tnshort.net")
 VERIFY2_API = environ.get('VERIFY2_API', "4fa150d44b4bf6579c24b33bbbb786dbfb4fc673")
