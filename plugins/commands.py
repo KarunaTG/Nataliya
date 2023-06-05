@@ -93,7 +93,7 @@ async def start(client, message):
                 btn.append([InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**Yᴏᴜ ᴀʀᴇ ɴᴏᴛ ɪɴ ᴏᴜʀ Bᴀᴄᴋ-ᴜᴘ ᴄʜᴀɴɴᴇʟ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ sᴏ ʏᴏᴜ ᴅᴏɴ'ᴛ ɢᴇᴛ ᴛʜᴇ ᴍᴏᴠɪᴇ ғɪʟᴇ...\n\nIғ ʏᴏᴜ ᴡᴀɴᴛ ᴛʜᴇ ᴍᴏᴠɪᴇ ғɪʟᴇ, ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ '❆ Jᴏɪɴ Oᴜʀ Bᴀᴄᴋ-Uᴘ Cʜᴀɴɴᴇʟ ❆' ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴀɴᴅ ᴊᴏɪɴ ᴏᴜʀ ʙᴀᴄᴋ-ᴜᴘ ᴄʜᴀɴɴᴇʟ, ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ '↻ Tʀʏ Aɢᴀɪɴ' ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ...\n\nTʜᴇɴ ʏᴏᴜ ᴡɪʟʟ ɢᴇᴛ ᴛʜᴇ ᴍᴏᴠɪᴇ ғɪʟᴇs...**",
+            text="**Please Join Our Update Channel🎗 \n Then Tap On Try Again ⚡ \n You'll Get Your File 🔆**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
             )
@@ -251,11 +251,11 @@ async def start(client, message):
         if is_valid == True:
             if fileid == "send_all":
                 btn = [[
-                    InlineKeyboardButton("Gᴇᴛ Fɪʟᴇ", callback_data=f"checksub#send_all")
+                    InlineKeyboardButton("Gᴇᴛ Yᴏᴜʀ Rᴇǫᴜᴇsᴛᴇᴅ Fɪʟᴇ", callback_data=f"checksub#send_all")
                 ]]
                 await verify_user(client, userid, token)
                 await message.reply_text(
-                    text=f"<b>Hᴇʏ {message.from_user.mention}, Yᴏᴜ ᴀʀᴇ sᴜᴄᴄᴇssғᴜʟʟʏ ᴠᴇʀɪғɪᴇᴅ !\nNᴏᴡ ʏᴏᴜ ʜᴀᴠᴇ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇss ғᴏʀ ᴀʟʟ ᴍᴏᴠɪᴇs ᴛɪʟʟ ᴛʜᴇ ɴᴇxᴛ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴡʜɪᴄʜ ɪs ᴀғᴛᴇʀ 12 ʜᴏᴜʀs ғʀᴏᴍ ɴᴏᴡ.</b>",
+                    text=f"<b>Hᴇʏ {message.from_user.mention}, Yᴏᴜ Aʀᴇ Sᴜᴄᴄᴇssғᴜʟʟʏ Vᴇʀɪғɪᴇᴅ ! Yᴏᴜ Cᴀɴ Eɴᴊᴏʏ Vɪᴘ Aᴅ-Fʀᴇᴇ Aᴄᴄᴇss 🔆</b>",
                     protect_content=True if PROTECT_CONTENT else False,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -264,7 +264,7 @@ async def start(client, message):
                 InlineKeyboardButton("Get File", url=f"https://telegram.me/{temp.U_NAME}?start=files_{fileid}")
             ]]
             await message.reply_text(
-                text=f"<b>Hᴇʏ {message.from_user.mention}, Yᴏᴜ ᴀʀᴇ sᴜᴄᴄᴇssғᴜʟʟʏ ᴠᴇʀɪғɪᴇᴅ !\nNᴏᴡ ʏᴏᴜ ʜᴀᴠᴇ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇss ғᴏʀ ᴀʟʟ ᴍᴏᴠɪᴇs ᴛɪʟʟ ᴛʜᴇ ɴᴇxᴛ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴡʜɪᴄʜ ɪs ᴀғᴛᴇʀ 12 ʜᴏᴜʀs ғʀᴏᴍ ɴᴏᴡ.</b>",
+                text=f"<b>Hᴇʏ {message.from_user.mention}, Yᴏᴜ Aʀᴇ Sᴜᴄᴄᴇssғᴜʟʟʏ Vᴇʀɪғɪᴇᴅ ! Yᴏᴜ Cᴀɴ Eɴᴊᴏʏ Vɪᴘ Aᴅ-Fʀᴇᴇ Aᴄᴄᴇss 🔆</b>",
                 protect_content=True if PROTECT_CONTENT else False,
                 reply_markup=InlineKeyboardMarkup(btn)
             )
@@ -286,7 +286,7 @@ async def start(client, message):
                     InlineKeyboardButton("Hᴏᴡ Tᴏ Vᴇʀɪғʏ", url=HOW_TO_VERIFY)
                 ]]
                 await message.reply_text(
-                    text="<b>Yᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴠᴇʀɪғɪᴇᴅ!\nKɪɴᴅʟʏ ᴠᴇʀɪғʏ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ Sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ ɢᴇᴛ ᴀᴄᴄᴇss ᴛᴏ ᴜɴʟɪᴍɪᴛᴇᴅ ᴍᴏᴠɪᴇs ᴜɴᴛɪʟ 12 ʜᴏᴜʀs ғʀᴏᴍ ɴᴏᴡ !</b>",
+                    text="<b>Yᴏᴜ Aʀᴇ Nᴏᴛ Vᴇʀɪғɪᴇᴅ🤦🏻‍♀️ \nKɪɴᴅʟʏ Vᴇʀɪғʏ Tᴏ Gᴇᴛ Vɪᴘ Aᴄᴄᴇss🔆</b>",
                     protect_content=True if PROTECT_CONTENT else False,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -339,7 +339,7 @@ async def start(client, message):
             InlineKeyboardButton("Hᴏᴡ Tᴏ Vᴇʀɪғʏ", url=HOW_TO_VERIFY)
         ]]
         await message.reply_text(
-            text="<b>Yᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴠᴇʀɪғɪᴇᴅ!\nKɪɴᴅʟʏ ᴠᴇʀɪғʏ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ Sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ ɢᴇᴛ ᴀᴄᴄᴇss ᴛᴏ ᴜɴʟɪᴍɪᴛᴇᴅ ᴍᴏᴠɪᴇs ᴜɴᴛɪʟ 12 ʜᴏᴜʀs ғʀᴏᴍ ɴᴏᴡ !</b>",
+            text="<b>Yᴏᴜ Aʀᴇ Nᴏᴛ Vᴇʀɪғɪᴇᴅ🤦🏻‍♀️ \nKɪɴᴅʟʏ Vᴇʀɪғʏ Tᴏ Gᴇᴛ Vɪᴘ Aᴄᴄᴇss🔆</b>",
             protect_content=True if PROTECT_CONTENT else False,
             reply_markup=InlineKeyboardMarkup(btn)
         )
