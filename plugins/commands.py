@@ -163,7 +163,7 @@ async def start(client, message):
                           InlineKeyboardButton('🔆Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url=MOVIE_GROUP),
                           InlineKeyboardButton('Sᴇʀɪᴇs Gʀᴏᴜᴘ🔆', url=SERIES_GROUP)
                        ],[
-                          InlineKeyboardButton("Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ", url=MAIN_CHANNEL)
+                          InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=MAIN_CHANNEL)
                          ]
                         ]
                     )
@@ -182,7 +182,7 @@ async def start(client, message):
                           InlineKeyboardButton('🔆Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url=MOVIE_GROUP),
                           InlineKeyboardButton('Sᴇʀɪᴇs Gʀᴏᴜᴘ🔆', url=SERIES_GROUP)
                        ],[
-                          InlineKeyboardButton("Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ", url=MAIN_CHANNEL)
+                          InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=MAIN_CHANNEL)
                          ]
                         ]
                     )
@@ -301,7 +301,7 @@ async def start(client, message):
                       InlineKeyboardButton('🔆Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url=MOVIE_GROUP),
                       InlineKeyboardButton('Sᴇʀɪᴇs Gʀᴏᴜᴘ🔆', url=SERIES_GROUP)
                    ],[
-                      InlineKeyboardButton("Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ", url=MAIN_CHANNEL)
+                      InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=MAIN_CHANNEL)
                      ]
                     ]
                 )
@@ -355,7 +355,7 @@ async def start(client, message):
               InlineKeyboardButton('🔆Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url=MOVIE_GROUP),
               InlineKeyboardButton('Sᴇʀɪᴇs Gʀᴏᴜᴘ🔆', url=SERIES_GROUP)
            ],[
-              InlineKeyboardButton("Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ", url=MAIN_CHANNEL)
+              InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=MAIN_CHANNEL)
              ]
             ]
         )
