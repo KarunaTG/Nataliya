@@ -8,7 +8,7 @@ from pyrogram.errors import ChatAdminRequired, FloodWait
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from database.ia_filterdb import Media, get_file_details, unpack_new_file_id, get_bad_files
 from database.users_chats_db import db
-from info import CHANNELS, ADMINS, AUTH_CHANNEL, LOG_CHANNEL, PICS, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION, PROTECT_CONTENT, CHNL_LNK, GRP_LNK, REQST_CHANNEL, SUPPORT_CHAT_ID, MAX_B_TN, IS_VERIFY, HOW_TO_VERIFY, MOVIE_GROUP, SERIES_GROUP, DC_CHANNEL, MARVEL_CHANNEL, MAIN_CHANNEL
+from info import CHANNELS, ADMINS, AUTH_CHANNEL, LOG_CHANNEL, PICS, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION, PROTECT_CONTENT, CHNL_LNK, GRP_LNK, REQST_CHANNEL, SUPPORT_CHAT_ID, MAX_B_TN, IS_VERIFY, HOW_TO_VERIFY, MOVIE_GROUP, SERIES_GROUP, DC_CHANNEL, MARVEL_CHANNEL, VIP_LINK, MAIN_CHANNEL
 from utils import get_settings, get_size, is_subscribed, save_group_settings, temp, verify_user, check_token, check_verification, get_token, send_all
 from database.connections_mdb import active_connection
 import re
@@ -244,7 +244,7 @@ async def start(client, message):
         fileid = data.split("-", 3)[3]
         if str(message.from_user.id) != str(userid):
             return await message.reply_text(
-                text="<b>Iɴᴠᴀʟɪᴅ ʟɪɴᴋ ᴏʀ Exᴘɪʀᴇᴅ ʟɪɴᴋ !</b>",
+                text="<b> Yᴏᴜ'ʀᴇ Usɪɴɢ Oʟᴅ Vᴇʀɪғʏ Lɪɴᴋ, Tʀʏ Aɢᴀɪɴ Wɪᴛʜ A Nᴇᴡ Vᴇʀɪғʏ Lɪɴᴋ. Tᴏ Aᴠᴏɪᴅ Tʜɪs Issᴜᴇ Iɴ Fᴜᴛᴜʀᴇ Dᴏɴ'ᴛ Sᴘᴀᴍ Tʜᴇ Bᴏᴛ Aɴᴅ Wᴀɪᴛ 10 Sᴇᴄᴏɴᴅ Fᴏʀ Vᴇʀɪғʏ Lɪɴᴋ Aɴᴅ Aʟsᴏ Dᴏɴ'ᴛ Sʜᴀʀᴇ Oʀ Cᴏᴘʏ Vᴇʀɪғʏ Lɪɴᴋ !</b>",
                 protect_content=True if PROTECT_CONTENT else False
             )
         is_valid = await check_token(client, userid, token)
@@ -272,7 +272,7 @@ async def start(client, message):
             return
         else:
             return await message.reply_text(
-                text="<b>Iɴᴠᴀʟɪᴅ ʟɪɴᴋ ᴏʀ Exᴘɪʀᴇᴅ ʟɪɴᴋ !</b>",
+                text="<b> Yᴏᴜ'ʀᴇ Usɪɴɢ Oʟᴅ Vᴇʀɪғʏ Lɪɴᴋ, Tʀʏ Aɢᴀɪɴ Wɪᴛʜ A Nᴇᴡ Vᴇʀɪғʏ Lɪɴᴋ. Tᴏ Aᴠᴏɪᴅ Tʜɪs Issᴜᴇ Iɴ Fᴜᴛᴜʀᴇ Dᴏɴ'ᴛ Sᴘᴀᴍ Tʜᴇ Bᴏᴛ Aɴᴅ Wᴀɪᴛ 10 Sᴇᴄᴏɴᴅ Fᴏʀ Vᴇʀɪғʏ Lɪɴᴋ Aɴᴅ Aʟsᴏ Dᴏɴ'ᴛ Sʜᴀʀᴇ Oʀ Cᴏᴘʏ Vᴇʀɪғʏ Lɪɴᴋ !</b>",
                 protect_content=True if PROTECT_CONTENT else False
             )
 
@@ -282,10 +282,12 @@ async def start(client, message):
         try:
             if IS_VERIFY and not await check_verification(client, message.from_user.id):
                 btn = [[
-                    InlineKeyboardButton("♦️ Cʟɪᴄᴋ Hᴇʀᴇ TO Vᴇʀɪғʏ ♦️", url=await get_token(client, query.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id)),
-                InlineKeyboardButton("🔆 Vɪᴘ Mᴇᴍʙᴇʀsʜɪᴘ 🔆", url=.me/MrperfectOffcial/39),
-                InlineKeyboardButton("‼️ Hᴏᴡ Tᴏ Vᴇʀɪғʏ ‼️", url=HOW_TO_VERIFY)
-            ]]
+                        InlineKeyboardButton("♦️ Cʟɪᴄᴋ Hᴇʀᴇ TO Vᴇʀɪғʏ ♦️", url=await get_token(client,message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id)),
+                    ],[
+                        InlineKeyboardButton("🔆 Vɪᴘ Mᴇᴍʙᴇʀsʜɪᴘ 🔆", url=VIP_LINK),
+                    ],[
+                        InlineKeyboardButton("‼️ Hᴏᴡ Tᴏ Vᴇʀɪғʏ ‼️", url=HOW_TO_VERIFY)
+                      ]]
                 await message.reply_text(
                     text="<b>Yᴏᴜ Aʀᴇ Nᴏᴛ Vᴇʀɪғɪᴇᴅ🤦🏻‍♀️ \nKɪɴᴅʟʏ Vᴇʀɪғʏ Tᴏ Gᴇᴛ Vɪᴘ Aᴄᴄᴇss🔆</b>",
                     protect_content=True if PROTECT_CONTENT else False,
@@ -336,10 +338,12 @@ async def start(client, message):
         f_caption = f"{files.file_name}"
     if IS_VERIFY and not await check_verification(client, message.from_user.id):
         btn = [[
-            InlineKeyboardButton("♦️ Cʟɪᴄᴋ Hᴇʀᴇ TO Vᴇʀɪғʏ ♦️", url=await get_token(client, query.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id)),
-                InlineKeyboardButton("🔆 Vɪᴘ Mᴇᴍʙᴇʀsʜɪᴘ 🔆", url=.me/MrperfectOffcial/39),
+                InlineKeyboardButton("♦️ Cʟɪᴄᴋ Hᴇʀᴇ TO Vᴇʀɪғʏ ♦️", url=await get_token(client,message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id)),
+            ],[
+                InlineKeyboardButton("🔆 Vɪᴘ Mᴇᴍʙᴇʀsʜɪᴘ 🔆", url=VIP_LINK),
+            ],[
                 InlineKeyboardButton("‼️ Hᴏᴡ Tᴏ Vᴇʀɪғʏ ‼️", url=HOW_TO_VERIFY)
-            ]]
+              ]]
         await message.reply_text(
             text="<b>Yᴏᴜ Aʀᴇ Nᴏᴛ Vᴇʀɪғɪᴇᴅ🤦🏻‍♀️ \nKɪɴᴅʟʏ Vᴇʀɪғʏ Tᴏ Gᴇᴛ Vɪᴘ Aᴄᴄᴇss🔆</b>",
             protect_content=True if PROTECT_CONTENT else False,

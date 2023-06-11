@@ -11,8 +11,8 @@ from Script import script
 import pyrogram
 from database.connections_mdb import active_connection, all_connections, delete_connection, if_active, make_active, \
     make_inactive
-from info import ADMINS, AUTH_CHANNEL, AUTH_USERS, SUPPORT_CHAT_ID, CUSTOM_FILE_CAPTION, MSG_ALRT, PICS, AUTH_GROUPS, P_TTI_SHOW_OFF, GRP_LNK, CHNL_LNK, NOR_IMG, LOG_CHANNEL, MOVIE_GROUP, SERIES_GROUP, DC_CHANNEL, MARVEL_CHANNEL, MAIN_CHANNEL, SPELL_IMG, MAX_B_TN, IMDB, \
-    SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE, NO_RESULTS_MSG, IS_VERIFY, HOW_TO_VERIFY
+from info import ADMINS, AUTH_CHANNEL, AUTH_USERS, SUPPORT_CHAT_ID, CUSTOM_FILE_CAPTION, MSG_ALRT, PICS, AUTH_GROUPS, P_TTI_SHOW_OFF, GRP_LNK, CHNL_LNK, NOR_IMG, LOG_CHANNEL, AUTO_REQUEST, MOVIE_GROUP, SERIES_GROUP, DC_CHANNEL, MARVEL_CHANNEL, MAIN_CHANNEL, SPELL_IMG, MAX_B_TN, IMDB, \
+    SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE, NO_RESULTS_MSG, IS_VERIFY, HOW_TO_VERIFY, VIP_LINK
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, InputMediaPhoto
 from pyrogram import Client, filters, enums
 from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
@@ -38,7 +38,7 @@ BUTTONS = {}
 SPELL_CHECK = {}
 
 
-@Client.on_message(filters.group & filters.text & filters.incoming)
+@Client.on_message((filters.group | filters.private) & filters.text & filters.incoming)
 async def give_filter(client, message):
     if message.chat.id != SUPPORT_CHAT_ID:
         glob = await global_filters(client, message)
@@ -352,8 +352,8 @@ async def language_check(bot, query):
             )
         
         btn.insert(0, [
-            InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Tᴏ PM !", callback_data=f"send_fall#{pre}#{0}#{userid}"),
-            InlineKeyboardButton("! Lᴀɴɢᴜᴀɢᴇs !", callback_data=f"select_lang#{userid}")
+            InlineKeyboardButton("🔆 Sᴇɴᴅ Aʟʟ Tᴏ PM", callback_data=f"send_fall#{pre}#{0}#{userid}"),
+            InlineKeyboardButton("Lᴀɴɢᴜᴀɢᴇs 🔆", callback_data=f"select_lang#{userid}")
         ])
 
         btn.insert(0, [
@@ -447,7 +447,7 @@ async def advantage_spoll_choker(bot, query):
                 reqstr1 = query.from_user.id if query.from_user else 0
                 reqstr = await bot.get_users(reqstr1)
                 if NO_RESULTS_MSG:
-                    await bot.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, movie)))
+                    await bot.send_message(chat_id=AUTO_REQUEST, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, movie)))
                 k = await query.message.edit(script.MVE_NT_FND)
                 await asyncio.sleep(10)
                 await k.delete()
@@ -738,9 +738,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             if is_over == 'done':
                 return await query.answer(f"Hᴇʏ {query.from_user.first_name}, Aʟʟ Fɪʟᴇs Oɴ Tʜɪs Pᴀɢᴇ Hᴀs Bᴇᴇɴ Sᴇɴᴛ, Cʜᴇᴄᴋ Bᴏᴛ PM !", show_alert=True)
             elif is_over == 'fsub':
-                return await query.answer("Hᴇʏ, Yᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴊᴏɪɴᴇᴅ ɪɴ ᴍʏ ʙᴀᴄᴋ ᴜᴘ ᴄʜᴀɴɴᴇʟ. Cʜᴇᴄᴋ ᴍʏ PM ᴛᴏ ᴊᴏɪɴ ᴀɴᴅ ɢᴇᴛ ғɪʟᴇs !", show_alert=True)
+                return await query.answer("Yᴏᴜ Aʀᴇ Nᴏᴛ Jᴏɪɴᴇᴅ Iɴ Mᴀɪɴ Cʜᴀɴɴᴇʟ, Cʜᴇᴄᴋ Mʏ PM Aɴᴅ Jᴏɪɴ Mᴀɪɴ Cʜᴀɴɴᴇʟ!", show_alert=True)
             elif is_over == 'verify':
-                return await query.answer("<b>Yᴏᴜ Aʀᴇ Nᴏᴛ Vᴇʀɪғɪᴇᴅ🤦🏻‍♀️ \nKɪɴᴅʟʏ Vᴇʀɪғʏ Tᴏ Gᴇᴛ Vɪᴘ Aᴄᴄᴇss🔆</b>", show_alert=True)
+                return await query.answer("Yᴏᴜ Aʀᴇ Nᴏᴛ Vᴇʀɪғɪᴇᴅ \nCʜᴇᴄᴋ Mʏ PM Aɴᴅ Kɪɴᴅʟʏ Vᴇʀɪғʏ 🔆", show_alert=True)
             else:
                 return await query.answer(f"Eʀʀᴏʀ: {is_over}", show_alert=True)
         files_ = await get_file_details(file_id)
@@ -763,10 +763,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
         if IS_VERIFY and not await check_verification(client, query.from_user.id):
             btn = [[
-                InlineKeyboardButton("♦️ Cʟɪᴄᴋ Hᴇʀᴇ TO Vᴇʀɪғʏ ♦️", url=await get_token(client, query.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id)),
-                InlineKeyboardButton("🔆 Vɪᴘ Mᴇᴍʙᴇʀsʜɪᴘ 🔆", url=.me/MrperfectOffcial/39),
-                InlineKeyboardButton("‼️ Hᴏᴡ Tᴏ Vᴇʀɪғʏ ‼️", url=HOW_TO_VERIFY)
-            ]]
+                    InlineKeyboardButton("♦️ Cʟɪᴄᴋ Hᴇʀᴇ TO Vᴇʀɪғʏ ♦️", url=await get_token(client, query.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id)),
+                ],[ 
+                    InlineKeyboardButton("🔆 Vɪᴘ Mᴇᴍʙᴇʀsʜɪᴘ 🔆", url=VIP_LINK),
+                ],[  
+                    InlineKeyboardButton("‼️ Hᴏᴡ Tᴏ Vᴇʀɪғʏ ‼️", url=HOW_TO_VERIFY)
+                  ]]
             await client.send_message(
                 chat_id=query.from_user.id,
                 text="<b>Yᴏᴜ Aʀᴇ Nᴏᴛ Vᴇʀɪғɪᴇᴅ🤦🏻‍♀️ \nKɪɴᴅʟʏ Vᴇʀɪғʏ Tᴏ Gᴇᴛ Vɪᴘ Aᴄᴄᴇss🔆</b>",
@@ -804,9 +806,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if is_over == 'done':
             return await query.answer(f"Hᴇʏ {query.from_user.first_name}, Aʟʟ Fɪʟᴇs Oɴ Tʜɪs Pᴀɢᴇ Hᴀs Bᴇᴇɴ Sᴇɴᴛ, Cʜᴇᴄᴋ Bᴏᴛ PM !", show_alert=True)
         elif is_over == 'fsub':
-            return await query.answer("Hᴇʏ, Yᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴊᴏɪɴᴇᴅ ɪɴ ᴍʏ ʙᴀᴄᴋ ᴜᴘ ᴄʜᴀɴɴᴇʟ. Cʜᴇᴄᴋ ᴍʏ PM ᴛᴏ ᴊᴏɪɴ ᴀɴᴅ ɢᴇᴛ ғɪʟᴇs !", show_alert=True)
+            return await query.answer("Yᴏᴜ Aʀᴇ Nᴏᴛ Jᴏɪɴᴇᴅ Iɴ Mᴀɪɴ Cʜᴀɴɴᴇʟ, Cʜᴇᴄᴋ Mʏ PM Aɴᴅ Jᴏɪɴ Mᴀɪɴ Cʜᴀɴɴᴇʟ!", show_alert=True)
         elif is_over == 'verify':
-            return await query.answer("<b>Yᴏᴜ Aʀᴇ Nᴏᴛ Vᴇʀɪғɪᴇᴅ🤦🏻‍♀️ \nKɪɴᴅʟʏ Vᴇʀɪғʏ Tᴏ Gᴇᴛ Vɪᴘ Aᴄᴄᴇss🔆</b>", show_alert=True)
+            return await query.answer("Yᴏᴜ Aʀᴇ Nᴏᴛ Vᴇʀɪғɪᴇᴅ \nCʜᴇᴄᴋ Mʏ PM Aɴᴅ Kɪɴᴅʟʏ Vᴇʀɪғʏ 🔆", show_alert=True)
         else:
             return await query.answer(f"Eʀʀᴏʀ: {is_over}", show_alert=True)
 
@@ -1422,7 +1424,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ident, set_type, status, grp_id = query.data.split("#")
         grpid = await active_connection(str(query.from_user.id))
 
-        if set_type == 'is_shortlink' and query.from_user.id not in ADMINS:
+        if set_type == 'botpm' and query.from_user.id not in ADMINS:
             return await query.answer(text=f"Hᴇʏ {query.from_user.first_name}, Yᴏᴜ ᴄᴀɴ'ᴛ ᴄʜᴀɴɢᴇ sʜᴏʀᴛʟɪɴᴋ sᴇᴛᴛɪɴɢs ғᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ !\n\nIᴛ's ᴀɴ ᴀᴅᴍɪɴ ᴏɴʟʏ sᴇᴛᴛɪɴɢ !", show_alert=True)
 
         if str(grp_id) != str(grpid) and query.from_user.id not in ADMINS:
@@ -1518,7 +1520,7 @@ async def auto_filter(client, msg, spoll=False):
                     return await advantage_spell_chok(client, msg)
                 else:
                     if NO_RESULTS_MSG:
-                        await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, search)))
+                        await client.send_message(chat_id=AUTO_REQUEST, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, search)))
                     return
         else:
             return
@@ -1748,7 +1750,7 @@ async def advantage_spell_chok(client, msg):
                    InlineKeyboardButton("Sᴇᴀʀᴄʜ Sᴘᴇʟʟɪɴɢ Oɴ Gᴏᴏɢʟᴇ", url=f"https://www.google.com/search?q={reqst_gle}")
         ]]
         if NO_RESULTS_MSG:
-            await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
+            await client.send_message(chat_id=AUTO_REQUEST, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
         k = await msg.reply_photo(
             photo=SPELL_IMG, 
             caption=script.I_CUDNT.format(mv_rqst),
@@ -1764,7 +1766,7 @@ async def advantage_spell_chok(client, msg):
                    InlineKeyboardButton("Sᴇᴀʀᴄʜ Sᴘᴇʟʟɪɴɢ Oɴ Gᴏᴏɢʟᴇ", url=f"https://www.google.com/search?q={reqst_gle}")
         ]]
         if NO_RESULTS_MSG:
-            await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
+            await client.send_message(chat_id=AUTO_REQUEST, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
         k = await msg.reply_photo(
             photo=SPELL_IMG, 
             caption=script.I_CUDNT.format(mv_rqst),
