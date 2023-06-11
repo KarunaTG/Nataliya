@@ -15,7 +15,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '2229357'))
 API_HASH = environ.get('API_HASH', '31f183a5a075fd4996cb8ad59e7b794f')
-BOT_TOKEN = environ.get('BOT_TOKEN', '')
+BOT_TOKEN = environ.get('BOT_TOKEN', '1862447115:AAFXW_EsfV4XLMMiu20P62iAxBZFfgtBXhs')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -42,18 +42,18 @@ SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", True))
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Telegram_files")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://shieldbot:Karuna100@cluster0.kx6zz.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
-IS_VERIFY =  is_enabled (( environ . get ( 'IS_VERIFY' , True ) ), True )
-HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/How_To_Open_Shortlink_Toturial")
+IS_VERIFY =  is_enabled (( environ . get ( 'IS_VERIFY' , ' True ' ) ), True )
+HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/Verify_Toturial")
 VERIFY2_URL = environ.get('VERIFY2_URL', "tnshort.net")
-VERIFY2_API = environ.get('VERIFY2_API', "4fa150d44b4bf6579c24b33bbbb786dbfb4fc673")
+VERIFY2_API = environ.get('VERIFY2_API', "35740dcc6c2a808be526806338ba29f5f759968a")
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'easysky.in')
-SHORTLINK_API = environ.get('SHORTLINK_API', 'c2150e28189cefefd05f8a9c5c5770cc462033e3')
-IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
+SHORTLINK_API = environ.get('SHORTLINK_API', 'c0c9fb160a5d33bb141ce117e2cce939a36a9682')
+IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "5")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
@@ -65,8 +65,10 @@ MOVIE_GROUP = environ.get('MOVIE_GROUP', 'https://t.me/+zMweRQDyPpo2Yjhl')
 DC_CHANNEL = environ.get('DC_CHANNEL', 'https://t.me/+ZD3JAuAXQ4BkNjZl')
 MARVEL_CHANNEL = environ.get('MARVEL_CHANNEL', 'https://t.me/+5PhM9DHUi_djMDU1')
 MAIN_CHANNEL = environ.get('MAIN_CHANNEL', 'https://t.me/TVSeriesCW')
+VIP_LINK = environ.get('VIP_LINK', 'https://t.me/MrperfectOffcial/39')
 MSG_ALRT = environ.get('MSG_ALRT', 'TVSeriesCW Best Channel In Telegram🚩')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001500025641'))
+AUTO_REQUEST = int(environ.get('AUTO_REQUEST', '-1001820924316'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'tvseriescw_group')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)

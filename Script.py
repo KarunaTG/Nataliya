@@ -101,12 +101,12 @@ Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:
 ★ Usᴇᴅ Sᴛᴏʀᴀɢᴇ: <code>{}</code>
 ★ Fʀᴇᴇ Sᴛᴏʀᴀɢᴇ: <code>{}</code></b>"""
 
-    LOG_TEXT_G = """#NewGroup
+    LOG_TEXT_G = """#NewGroup_Priyanka
 Gʀᴏᴜᴘ = {}(<code>{}</code>)
 Tᴏᴛᴀʟ Mᴇᴍʙᴇʀs = <code>{}</code>
 Aᴅᴅᴇᴅ Bʏ - {}"""
 
-    LOG_TEXT_P = """#NewUser
+    LOG_TEXT_P = """#NewUser_Priyanka
 ID - <code>{}</code>
 Nᴀᴍᴇ - {}"""
 
@@ -152,13 +152,13 @@ Check Your Spelling, Release Date, Follow Request Tips , If You Still Don't Get 
 › Flash S01E02 Hindi ✅"""
 
     NORSLTS = """
-★ #𝗡𝗼𝗥𝗲𝘀𝘂𝗹𝘁𝘀 ★
+★ #Aᴜᴛᴏ_Rᴇǫᴜᴇsᴛ ★
 
-𝗜𝗗 <b>: {}</b>
+♦️ <b>Mᴇᴍʙᴇʀ Iᴅ</b> : `{}`
 
-𝗡𝗮𝗺𝗲 <b>: {}</b>
+🔷 <b>Rᴇǫᴜᴇsᴛᴇᴅ Bʏ</b> : `{}`
 
-𝗠𝗲𝘀𝘀𝗮𝗴𝗲 <b>: {}</b>"""
+🔆 <b>Rᴇǫᴜᴇsᴛᴇᴅ Fɪʟᴇ</b> : 🎗`{}`🎗"""
 
     CAPTION = """
 🎗<b>[{file_name}](https://t.me/+3cfeesNk_cg3MGQ9)</b>🎗 \n\n🔆 <i><b>Movies Group » [@HeavenOfMovies](https://t.me/+zMweRQDyPpo2Yjhl)</i></b> \n🔆 <b><i>Series Group » [@HeavenOfSeries](https://t.me/+6q0f6-TYbA85ZjM1)</b></i>"""
