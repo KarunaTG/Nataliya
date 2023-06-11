@@ -15,7 +15,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '2229357'))
 API_HASH = environ.get('API_HASH', '31f183a5a075fd4996cb8ad59e7b794f')
-BOT_TOKEN = environ.get('BOT_TOKEN', '1862447115:AAFXW_EsfV4XLMMiu20P62iAxBZFfgtBXhs')
+BOT_TOKEN = environ.get('BOT_TOKEN', '2062193742:AAFzp3J9dC4iHr6ynkL-eSGTc9rO33d40BU')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -28,7 +28,7 @@ SPELL_IMG = environ.get("SPELL_IMG", "https://te.legra.ph/file/4fa98ec48a8bf90c7
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '794968418').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001503756494').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '794968418 2088590636').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('AUTH_CHANNEL')
@@ -42,16 +42,16 @@ SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", True))
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://shieldbot:Karuna100@cluster0.kx6zz.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Karuna:15122000@cluster0.hrtev.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
 IS_VERIFY =  is_enabled (( environ . get ( 'IS_VERIFY' , ' True ' ) ), True )
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/Verify_Toturial")
-VERIFY2_URL = environ.get('VERIFY2_URL', "tnshort.net")
+VERIFY2_URL = environ.get('VERIFY2_URL', "vipurl.in")
 VERIFY2_API = environ.get('VERIFY2_API', "35740dcc6c2a808be526806338ba29f5f759968a")
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'easysky.in')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'vipurl.in')
 SHORTLINK_API = environ.get('SHORTLINK_API', 'c0c9fb160a5d33bb141ce117e2cce939a36a9682')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
