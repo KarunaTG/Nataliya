@@ -244,7 +244,7 @@ async def next_page(bot, query):
         InlineKeyboardButton("Lᴀɴɢᴜᴀɢᴇs 🔆", callback_data=f"select_lang#{req}")
     ])
     btn.insert(0, [
-        InlineKeyboardButton("⚡ Cʜᴇᴄᴋ Bᴏᴛ PM ⚡", url=f"https://t.me/{temp.U_NAME}")
+        InlineKeyboardButton("⚡ How To Open Link ⚡", url=f"https://t.me/Verify_Toturial/211")
     ])
     try:
         await query.edit_message_reply_markup(
@@ -357,7 +357,7 @@ async def language_check(bot, query):
         ])
 
         btn.insert(0, [
-            InlineKeyboardButton("⚡ Cʜᴇᴄᴋ Bᴏᴛ PM ⚡", url=f"https://t.me/{temp.U_NAME}")
+            InlineKeyboardButton("⚡ How To Open Link ⚡", url=f"https://t.me/Verify_Toturial/211")
         ])
 
         if offset != "":
