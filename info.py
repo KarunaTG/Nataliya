@@ -47,13 +47,13 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
-IS_VERIFY =  is_enabled (( environ . get ( 'IS_VERIFY' , ' True ' ) ), True )
+IS_VERIFY =  is_enabled (( environ . get ( 'IS_VERIFY' , ' False ' ) ), False )
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/Verify_Toturial")
 VERIFY2_URL = environ.get('VERIFY2_URL', "easysky.in")
 VERIFY2_API = environ.get('VERIFY2_API', "c0c9fb160a5d33bb141ce117e2cce939a36a9682")
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'easysky.in')
-SHORTLINK_API = environ.get('SHORTLINK_API', '546326320a3c0a8fdc061f56ca40972e1e35682f')
-IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'tnshort.net')
+SHORTLINK_API = environ.get('SHORTLINK_API', 'f227cac7805929655758fc9037313fb23ee7e1ee')
+IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "5")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
