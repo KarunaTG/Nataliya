@@ -244,7 +244,7 @@ async def next_page(bot, query):
         InlineKeyboardButton("Lᴀɴɢᴜᴀɢᴇs 🔆", callback_data=f"select_lang#{req}")
     ])
     btn.insert(0, [
-        InlineKeyboardButton("⁉️ Hᴏᴡ Tᴏ Oᴘᴇɴ Lɪɴᴋ ⁉️", url=f"https://t.me/Verify_Toturial")
+        InlineKeyboardButton("⁉️ Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ ⁉️", url=f"https://t.me/Verify_Toturial")
     ])
     try:
         await query.edit_message_reply_markup(
