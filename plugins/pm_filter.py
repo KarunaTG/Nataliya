@@ -236,7 +236,7 @@ async def next_page(bot, query):
     time_difference = timedelta(hours=cur_time.hour, minutes=cur_time.minute, seconds=(cur_time.second+(cur_time.microsecond/1000000))) - timedelta(hours=curr_time.hour, minutes=curr_time.minute, seconds=(curr_time.second+(curr_time.microsecond/1000000)))
     remaining_seconds = "{:.2f}".format(time_difference.total_seconds())
     if settings["button"]:
-        cap = f"<b> 🎬 Tɪᴛʟᴇ : {search}\n\n📂 Fɪʟᴇꜱ : {total}\n\n⏰ Rᴇsᴜʟᴛ Sʜᴏᴡɴ Iɴ : {remaining_seconds} <i>seconds 🔥</i>\n\n📝 Rᴇǫᴜᴇsᴛᴇᴅ Bʏ : {query.from_user.mention}\n\n⚜️ Pᴏᴡᴇʀᴇᴅ Bʏ : <a href=https://t.me/TG_LINKS_CHANNEL>MOVIE CHANNEL</a></b>"
+        cap = f"<b> 🎬 Tɪᴛʟᴇ : {search}\n\n📂 Fɪʟᴇꜱ : {total}\n\n⏰ Rᴇsᴜʟᴛ Sʜᴏᴡɴ Iɴ : {remaining_seconds} <i>Seconds 🔥</i>\n\n📝 Rᴇǫᴜᴇsᴛᴇᴅ Bʏ : {query.from_user.mention}</b>"
     else:
         # cap = f"<b>Hᴇʏ {query.from_user.mention}, Hᴇʀᴇ ɪs ᴛʜᴇ ʀᴇsᴜʟᴛ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search} \n\n</b>"
         cap = f"<b>Hᴇʏ {query.from_user.mention}, Fᴏᴜɴᴅ {total} Rᴇsᴜʟᴛs ғᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}\n\n</b>"
@@ -1208,7 +1208,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
     
     elif query.data == "pages":
         await query.answer()
-    
+
+    elif query.data.startswith("checksub"):
+        if AUTH_CHANNEL and not await is_subscribed(client, query):
+            await query.answer("Jᴏɪɴ ᴏᴜʀ Bᴀᴄᴋ-ᴜᴘ ᴄʜᴀɴɴᴇʟ ᴍᴀʜɴ! 😒", show_alert=True)
+            return
+        ident, kk, file_id = query.data.split("#")
+        await query.answer(url=f"https://t.me/{temp.U_NAME}?start={kk}_{file_id}")
+
+    elif query.data == "pages":
+        await query.answer()
+
     elif query.data.startswith("send_fsall"):
         temp_var, ident, key, offset = query.data.split("#")
         search = BUTTON0.get(key)
@@ -1221,19 +1231,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         files, n_offset, total = await get_search_results(query.message.chat.id, search, offset=int(offset), filter=True)
         await send_all(client, query.from_user.id, files, ident, query.message.chat.id, query.from_user.first_name, query)
         search = BUTTONS2.get(key)
-        files, n_offset, total = await get_search_results(query.message.chat.id, search, offset=int(offset), filter=True)
-        await send_all(client, query.from_user.id, files, ident, query.message.chat.id, query.from_user.first_name, query)
-        await query.answer(f"Hey {query.from_user.first_name}, All files on this page has been sent successfully to your PM !", show_alert=True)
-        
-    elif query.data.startswith("send_fall"):
-        temp_var, ident, key, offset = query.data.split("#")
-        if BUTTONS.get(key)!=None:
-            search = BUTTONS.get(key)
-        else:
-            search = FRESH.get(key)
-        if not search:
-            await query.answer(script.OLD_ALRT_TXT.format(query.from_user.first_name),show_alert=True)
-            return
         files, n_offset, total = await get_search_results(query.message.chat.id, search, offset=int(offset), filter=True)
         await send_all(client, query.from_user.id, files, ident, query.message.chat.id, query.from_user.first_name, query)
         await query.answer(f"Hey {query.from_user.first_name}, All files on this page has been sent successfully to your PM !", show_alert=True)
@@ -2208,7 +2205,7 @@ async def auto_filter(client, msg, spoll=False):
                 cap += f"<b>\n📁 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n</a></b>"
     else:
         if settings["button"]:
-            cap = f"<b>🎬 Tɪᴛʟᴇ : {search}\n\n📂 Fɪʟᴇꜱ : {total}\n\n⏰ Rᴇsᴜʟᴛ Sʜᴏᴡɴ Iɴ : {remaining_seconds} <i>seconds 🔥</i>\n\n📝 Rᴇǫᴜᴇsᴛᴇᴅ Bʏ : {query.from_user.mention}\n\n⚜️ Pᴏᴡᴇʀᴇᴅ Bʏ : <a href=https://t.me/N33VARP>𝗡𝟯𝟯𝗩𝗔𝗥𝗣</a></b>"
+            cap = f"<b>🎬 Tɪᴛʟᴇ : {search}\n\n📂 Fɪʟᴇꜱ : {total}\n\n⏰ Rᴇsᴜʟᴛ Sʜᴏᴡɴ Iɴ : {remaining_seconds} <i>Seconds 🔥</i>\n\n📝 Rᴇǫᴜᴇsᴛᴇᴅ Bʏ : {query.from_user.mention}</b>"
         else:
             # cap = f"<b>Hᴇʏ {message.from_user.mention}, Hᴇʀᴇ ɪs ᴛʜᴇ ʀᴇsᴜʟᴛ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search} \n\n</b>"
             cap = f"<b>Hᴇʏ {message.from_user.mention}, Fᴏᴜɴᴅ {total_results} Rᴇsᴜʟᴛs ғᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}\n\n</b>"
