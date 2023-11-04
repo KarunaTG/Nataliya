@@ -466,7 +466,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         
     #     btn.append(        [
     #             InlineKeyboardButton(
-    #                 text="↭ ʙᴀᴄᴋ ᴛᴏ ꜰɪʟᴇs ​↭",
+    #                 text="↭ Bᴀᴄᴋ Tᴏ Fɪʟᴇs ​↭",
     #                 callback_data=f"fl#homepage#search#{key}"
     #                 ),
     #         ])
@@ -629,7 +629,7 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
 
     btn.append([
             InlineKeyboardButton(
-                text="↭ ʙᴀᴄᴋ ᴛᴏ ꜰɪʟᴇs ​↭",
+                text="↭ Bᴀᴄᴋ Tᴏ Fɪʟᴇs ​↭",
                 callback_data=f"next_{req}_{key}_{offset}"
                 ),
     ])
@@ -683,7 +683,7 @@ async def qualities_cb_handler(client: Client, query: CallbackQuery):
     )
     req = query.from_user.id
     offset = 0
-    btn.append([InlineKeyboardButton(text="↭ ʙᴀᴄᴋ ᴛᴏ ꜰɪʟᴇs ​↭", callback_data=f"fl#homepage#{key}")])
+    btn.append([InlineKeyboardButton(text="↭ Bᴀᴄᴋ Tᴏ Fɪʟᴇs ​↭", callback_data=f"fl#homepage#{key}")])
 
     await query.edit_message_reply_markup(InlineKeyboardMarkup(btn))
     
@@ -824,7 +824,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
         
     #     btn.append(        [
     #             InlineKeyboardButton(
-    #                 text="↭ ʙᴀᴄᴋ ᴛᴏ ꜰɪʟᴇs ​↭",
+    #                 text="↭ Bᴀᴄᴋ Tᴏ Fɪʟᴇs ​↭",
     #                 callback_data=f"fl#homepage#search#{key}"
     #                 ),
     #         ])
@@ -921,7 +921,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         keyboard = InlineKeyboardMarkup([
             [InlineKeyboardButton(f"{stat}", callback_data=f"{cb}:{group_id}"),
              InlineKeyboardButton("ᴅᴇʟᴇᴛᴇ", callback_data=f"deletecb:{group_id}")],
-            [InlineKeyboardButton("⇋ ʙᴀᴄᴋ ⇋", callback_data="backcb")]
+            [InlineKeyboardButton("⇋ 𝐁𝐀𝐂𝐊 ⇋", callback_data="backcb")]
         ])
 
         await query.message.edit_text(
