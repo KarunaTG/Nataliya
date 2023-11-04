@@ -15,11 +15,11 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '2229357'))
 API_HASH = environ.get('API_HASH', '31f183a5a075fd4996cb8ad59e7b794f')
-BOT_TOKEN = environ.get('BOT_TOKEN', '2062193742:AAFzp3J9dC4iHr6ynkL-eSGTc9rO33d40BU')
+BOT_TOKEN = environ.get('BOT_TOKEN', "")
 
 # Bot settings
-CACHE_TIME = int(environ.get('CACHE_TIME', 300))
-USE_CAPTION_FILTER =  is_enabled (( environ . get ( 'USE_CAPTION_FILTER' , ' True ' )), True )
+CACHE_TIME = int(environ.get('CACHE_TIME', 1800))
+USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
 PICS = (environ.get('PICS', 'https://telegra.ph/file/0049d801d29e83d68b001.jpg https://te.legra.ph/file/8193e2252b8c2bf564de3.jpg')).split()
 NOR_IMG = environ.get("NOR_IMG", "https://te.legra.ph/file/7b22c0b70c00db3106b2c.jpg")
@@ -28,48 +28,47 @@ SPELL_IMG = environ.get("SPELL_IMG", "https://te.legra.ph/file/4fa98ec48a8bf90c7
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '794968418').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001503756494').split()]
-auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '794968418 2088590636').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '794968418').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
+PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '').split()]
 auth_channel = environ.get('AUTH_CHANNEL')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
-support_chat_id = environ.get('SUPPORT_CHAT_ID')
-reqst_channel = environ.get('REQST_CHANNEL_ID')
+support_chat_id = environ.get('SUPPORT_CHAT_ID', '')
+reqst_channel = environ.get('REQST_CHANNEL_ID', '')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", True))
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Karuna:15122000@cluster0.hrtev.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
-IS_VERIFY =  is_enabled (( environ . get ( 'IS_VERIFY' , ' False ' ) ), False )
-HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/Verify_Toturial")
-VERIFY2_URL = environ.get('VERIFY2_URL', "easysky.in")
-VERIFY2_API = environ.get('VERIFY2_API', "546326320a3c0a8fdc061f56ca40972e1e35682f")
+VERIFY = bool(environ.get('VERIFY', False))
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'easysky.in')
 SHORTLINK_API = environ.get('SHORTLINK_API', '546326320a3c0a8fdc061f56ca40972e1e35682f')
+SECOND_SHORTLINK_URL = environ.get('SECOND_SHORTLINK_URL', 'easysky.in')
+SECOND_SHORTLINK_API = environ.get('SECOND_SHORTLINK_API', 'c0c9fb160a5d33bb141ce117e2cce939a36a9682')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
-MAX_B_TN = environ.get("MAX_B_TN", "5")
+MAX_B_TN = environ.get("MAX_B_TN", "10")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+zMweRQDyPpo2Yjhl')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/TVSeriesCW')
-SERIES_GROUP = environ.get('SERIES_GROUP', 'https://t.me/+6q0f6-TYbA85ZjM1')
 MOVIE_GROUP = environ.get('MOVIE_GROUP', 'https://t.me/+zMweRQDyPpo2Yjhl')
-DC_CHANNEL = environ.get('DC_CHANNEL', 'https://t.me/+ZD3JAuAXQ4BkNjZl')
-MARVEL_CHANNEL = environ.get('MARVEL_CHANNEL', 'https://t.me/+M1a1ycOn6YsyMTc9')
+SERIES_GROUP = environ.get('SERIES_GROUP', 'https://t.me/+6q0f6-TYbA85ZjM1')
 MAIN_CHANNEL = environ.get('MAIN_CHANNEL', 'https://t.me/TVSeriesCW')
-VIP_LINK = environ.get('VIP_LINK', 'https://t.me/MrperfectOffcial/39')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/TVSeriesCW')
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Verify_Toturial')
+IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 MSG_ALRT = environ.get('MSG_ALRT', 'TVSeriesCW Best Channel In Telegram🚩')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001500025641'))
 AUTO_REQUEST = int(environ.get('AUTO_REQUEST', '-1001820924316'))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'tvseriescw_group')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
@@ -86,6 +85,12 @@ FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "False")), False)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
+
+QUALITIES = ["360p", "480p", "720p", "1080p", "1440p", "2160p"]
+
+LANGUAGES = ["malayalam", "tamil" ,"english", "hindi", "telugu", "kannada"]
+
+SEASONS = ["season 1" , "season 2" , "season 3" , "season 4", "season 5" , "season 6" , "season 7" , "season 8" , "season 9" , "season 10"]
 
 LOG_STR = "Current Cusomized Configurations are:-\n"
 LOG_STR += ("IMDB Results are enabled, Bot will be showing imdb details for you queries.\n" if IMDB else "IMBD Results are disabled.\n")
