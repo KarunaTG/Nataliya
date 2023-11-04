@@ -29,7 +29,7 @@ async def start(client, message):
                     InlineKeyboardButton('Sᴇʀɪᴇs Gʀᴏᴜᴘ🔆', url=SERIES_GROUP)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply(script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME),
+        await message.reply(script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup)
         await asyncio.sleep(2) # 😢 https://github.com/EvamariaTG/EvaMaria/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
         if not await db.get_chat(message.chat.id):
             total=await client.get_chat_members_count(message.chat.id)
@@ -47,11 +47,11 @@ async def start(client, message):
                     InlineKeyboardButton('Sᴇʀɪᴇs Gʀᴏᴜᴘ🔆', url=SERIES_GROUP)
                 ],[
                     InlineKeyboardButton('🌀Mᴀɪɴ Cʜᴀɴɴᴇʟ', url=MAIN_CHANNEL),
-                    InlineKeyboardButton('Vɪᴘ Mᴇᴍʙᴇʀsʜɪᴘ', url=VIP_MEMBERSHIP)
+                    InlineKeyboardButton('Vɪᴘ Mᴇᴍʙᴇʀsʜɪᴘ🌀', url=VIP_MEMBERSHIP)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await message.reply_sticker("CAACAgUAAxkBAAJeOWTqzCw95gnMkoRzi-Kd333UEA4wAAKjBAACSKDRVxK_r9UMhuoLHgQ") 
-        await asyncio.sleep(1)
+        m=await message.reply_sticker("CAACAgUAAxkBAAEKryFlRmcR5uIta374YeU0qWGpl9pU2gACMgsAAgdt8FR9xcT0MTT_EzME") 
+        await asyncio.sleep(2)
         await m.delete()
         await message.reply_video(
             video=random.choice(PICS),
@@ -83,20 +83,20 @@ async def start(client, message):
                 btn.append([InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**ʏᴏᴜ ɴᴇᴇᴅ ᴛᴏ Jᴏɪɴ ᴏᴜʀ ʙᴀᴄᴋ-ᴜᴘ ᴄʜᴀɴɴᴇʟ ɪɴ ᴏʀᴅᴇʀ ᴛᴏ ɢᴇᴛ ᴛʜᴇ ᴍᴏᴠɪᴇ ғɪʟᴇꜱ...\n\nIf you want the movie file, ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ '🍿ᴊᴏɪɴ ᴏᴜʀ ʙᴀᴄᴋ-ᴜᴘ ᴄʜᴀɴɴᴇʟ🍿' ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴀɴᴅ Jᴏɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ, ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ '🔄 Tʀʏ Aɢᴀɪɴ' ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ...\n\nᴛʜᴇɴ ʏᴏᴜ ᴡɪʟʟ ɢᴇᴛ ᴛʜᴇ ᴍᴏᴠɪᴇ ғɪʟᴇꜱ...**",
+            text="**🔆 Join Our Main Channel & Then Request Again in Group ♻ \n\n🔆 हमारे मैन चैनल से जुड़ें और फिर ग्रुप में दोबारा रिक्वेस्ट करें ♻**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
             )
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-                    InlineKeyboardButton('🔸 ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ 🔹', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                    InlineKeyboardButton('🎗️ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ 🎗️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK),
-                    InlineKeyboardButton('ɢʀᴏᴜᴘ', url=GRP_LNK)
+                    InlineKeyboardButton('🔆Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url=MOVIE_GROUP),
+                    InlineKeyboardButton('Sᴇʀɪᴇs Gʀᴏᴜᴘ🔆', url=SERIES_GROUP)
                 ],[
-                    InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
-                    InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')
+                    InlineKeyboardButton('🌀Mᴀɪɴ Cʜᴀɴɴᴇʟ', url=MAIN_CHANNEL),
+                    InlineKeyboardButton('Vɪᴘ Mᴇᴍʙᴇʀsʜɪᴘ🌀', url=VIP_MEMBERSHIP)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)      
         await message.reply_video(
@@ -147,8 +147,8 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK),
-                          InlineKeyboardButton('ɢʀᴏᴜᴘ', url=GRP_LNK)
+                          InlineKeyboardButton('🔆Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url=MOVIE_GROUP),
+                          InlineKeyboardButton('Sᴇʀɪᴇs Gʀᴏᴜᴘ🔆', url=SERIES_GROUP)
                          ]
                         ]
                     )
@@ -164,8 +164,8 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK),
-                          InlineKeyboardButton('ɢʀᴏᴜᴘ', url=GRP_LNK)
+                          InlineKeyboardButton('🔆Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url=MOVIE_GROUP),
+                          InlineKeyboardButton('Sᴇʀɪᴇs Gʀᴏᴜᴘ🔆', url=SERIES_GROUP)
                          ]
                         ]
                     )
@@ -256,9 +256,9 @@ async def start(client, message):
         k = await client.send_message(chat_id=message.from_user.id,text=f"<b>Get All Files in a Single Click!!!\n\n📂 ʟɪɴᴋ ➠ : {g}\n\n<i>Note: This message is deleted in 5 mins to avoid copyrights. Save the link to Somewhere else</i></b>", reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton('📂  ᴅᴏᴡɴʟᴏᴀᴅ ɴᴏᴡ  📂', url=g)
+                        InlineKeyboardButton('📂  Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ  📂', url=g)
                     ], [
-                        InlineKeyboardButton('💠  ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ  💠', url=await get_tutorial(chat_id))
+                        InlineKeyboardButton('💠  Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ  💠', url=await get_tutorial(chat_id))
                     ]
                 ]
             )
