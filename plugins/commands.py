@@ -281,6 +281,7 @@ async def start(client, message):
                     ], [
                         InlineKeyboardButton('⁉️ Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ ⁉️', url=await get_tutorial(chat_id))
                     ]
+                ]
             )
         )
         await asyncio.sleep(1200)
