@@ -252,7 +252,7 @@ async def start(client, message):
             g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=allfiles_{file_id}", True)
         else:
             g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=allfiles_{file_id}", False)
-        k = await client.send_message(chat_id=message.from_user.id,text=f"<b>Gᴇᴛ Aʟʟ Fɪʟᴇs Iɴ A Sɪɴɢʟᴇ Cʟɪᴄᴋ!!!\n\n📕 Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ ➠ : {g}\n\n </b>", reply_markup=InlineKeyboardMarkup(
+        k = await client.send_message(chat_id=message.from_user.id,text=f"<b>📚 Gᴇᴛ Aʟʟ Fɪʟᴇs Iɴ A Sɪɴɢʟᴇ Cʟɪᴄᴋ!!!\n\n📕 Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ ➠ : {g}\n\n </b>", reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton('🌀 Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ 🌀', url=g)
