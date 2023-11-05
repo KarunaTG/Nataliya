@@ -236,10 +236,10 @@ async def next_page(bot, query):
     time_difference = timedelta(hours=cur_time.hour, minutes=cur_time.minute, seconds=(cur_time.second+(cur_time.microsecond/1000000))) - timedelta(hours=curr_time.hour, minutes=curr_time.minute, seconds=(curr_time.second+(curr_time.microsecond/1000000)))
     remaining_seconds = "{:.2f}".format(time_difference.total_seconds())
     if settings["button"]:
-        cap = f"<b>🔆 Hᴇʏ {query.from_user.mention}, I Fᴏᴜɴᴅ {total} Rᴇsᴜʟᴛs Fᴏʀ➠ {search}👇🏻\n\n🗨 Select A Link & Press Start ↷\n\n</b>"
+        cap = f"<b>🔆 Hᴇʏ {query.from_user.mention}, I Fᴏᴜɴᴅ {total} Rᴇsᴜʟᴛs Fᴏʀ➠ {search}👇🏻\n\n🗨 Sᴇʟᴇᴄᴛ A Lɪɴᴋ & Pʀᴇss Sᴛᴀʀᴛ ↷\n\n</b>"
     else:
-        # cap = f"<b>Hᴇʏ {query.from_user.mention}, Hᴇʀᴇ ɪs ᴛʜᴇ ʀᴇsᴜʟᴛ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search} \n\n</b>"
-        cap = f"<b>🔆 Hᴇʏ {query.from_user.mention}, I Fᴏᴜɴᴅ {total} Rᴇsᴜʟᴛs Fᴏʀ➠ {search}👇🏻\n\n🗨 Select A Link & Press Start ↷\n\n</b>"
+        # cap = f"<b>🔆 Hᴇʏ {message.from_user.mention}, I Fᴏᴜɴᴅ {total_results} Rᴇsᴜʟᴛs Fᴏʀ➠ {search}👇🏻\n\n🗨 Sᴇʟᴇᴄᴛ A Lɪɴᴋ & Pʀᴇss Sᴛᴀʀᴛ ↷\n\n</b>"
+        cap = f"<b>🔆 Hᴇʏ {query.from_user.mention}, I Fᴏᴜɴᴅ {total} Rᴇsᴜʟᴛs Fᴏʀ➠ {search}👇🏻\n\n🗨 Sᴇʟᴇᴄᴛ A Lɪɴᴋ & Pʀᴇss Sᴛᴀʀᴛ ↷\n\n</b>"
         for file in files:
             cap += f"<b>📗 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n\n</a></b>"
 
@@ -2205,14 +2205,14 @@ async def auto_filter(client, msg, spoll=False):
                 cap += f"<b>\n📁 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n</a></b>"
     else:
         if settings["button"]:
-            cap = f"<b>🔆 Hᴇʏ {query.from_user.mention}, I Fᴏᴜɴᴅ {total} Rᴇsᴜʟᴛs Fᴏʀ➠ {search}👇🏻\n\n🗨 Select A Link & Press Start ↷</b>"
+            cap = f"<b>🔆 Hᴇʏ {message.from_user.mention}, I Fᴏᴜɴᴅ {total} Rᴇsᴜʟᴛs Fᴏʀ➠ {search}👇🏻\n\n🗨 Sᴇʟᴇᴄᴛ A Lɪɴᴋ & Pʀᴇss Sᴛᴀʀᴛ ↷</b>"
         else:
-            # cap = f"<b>Hᴇʏ {message.from_user.mention}, Hᴇʀᴇ ɪs ᴛʜᴇ ʀᴇsᴜʟᴛ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search} \n\n</b>"
-            cap = f"<b>🔆 Hᴇʏ {message.from_user.mention}, I Fᴏᴜɴᴅ {total_results} Rᴇsᴜʟᴛs Fᴏʀ➠ {search}👇🏻\n\n🗨 Select A Link & Press Start ↷\n\n</b>"
+            # cap = f""
+            cap = f"<b>🔆 Hᴇʏ {message.from_user.mention}, I Fᴏᴜɴᴅ {total_results} Rᴇsᴜʟᴛs Fᴏʀ➠ {search}👇🏻\n\n🗨 Sᴇʟᴇᴄᴛ A Lɪɴᴋ & Pʀᴇss Sᴛᴀʀᴛ ↷\n\n</b>"
             cap+="<b><u>📚 Requested Files 👇</u></b>\n\n"
             for file in files:
                 cap += f"<b>📗 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n\n</a></b>"
-
+<b>🔆 Hᴇʏ {message.from_user.mention}, I Fᴏᴜɴᴅ {total_results} Rᴇsᴜʟᴛs Fᴏʀ➠ {search}👇🏻\n\n🗨 Sᴇʟᴇᴄᴛ A Lɪɴᴋ & Pʀᴇss Sᴛᴀʀᴛ ↷\n\n</b>
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
