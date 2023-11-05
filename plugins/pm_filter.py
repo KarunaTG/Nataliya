@@ -2040,7 +2040,7 @@ async def auto_filter(client, msg, spoll=False):
             return
         if len(message.text) < 100:
             search = message.text
-            m=await message.reply_text(f"<b>🔆 Sᴇᴀʀᴄʜɪɴɢ Fᴏʀ '{search}'🔎...</b>")
+            m=await message.reply_text(f"<b>🔆 Sᴇᴀʀᴄʜɪɴɢ Fᴏʀ '{search}'....</b>")
             search = search.lower()
             find = search.split(" ")
             search = ""
@@ -2071,7 +2071,7 @@ async def auto_filter(client, msg, spoll=False):
     else:
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
-        m=await message.reply_text(f"<b>🔆 Sᴇᴀʀᴄʜɪɴɢ Fᴏʀ '{search}'🔎...</b>")
+        m=await message.reply_text(f"<b>🔆 Sᴇᴀʀᴄʜɪɴɢ Fᴏʀ '{search}'....</b>")
         settings = await get_settings(message.chat.id)
         await msg.message.delete()
     # if 'is_shortlink' in settings.keys():
@@ -2208,8 +2208,8 @@ async def auto_filter(client, msg, spoll=False):
             cap = f"<b>🔆 Hᴇʏ {message.from_user.mention}, I Fᴏᴜɴᴅ Rᴇsᴜʟᴛs Fᴏʀ➠ {search}👇🏻\n\n🗨 Sᴇʟᴇᴄᴛ A Lɪɴᴋ & Pʀᴇss Sᴛᴀʀᴛ ↷</b>"
         else:
             # cap = f""
-            cap = f"<b>🔆 Hᴇʏ {message.from_user.mention}, I Fᴏᴜɴᴅ {total_results} Rᴇsᴜʟᴛs Fᴏʀ➠ {search}👇🏻\n\n🗨 Sᴇʟᴇᴄᴛ A Lɪɴᴋ & Pʀᴇss Sᴛᴀʀᴛ ↷\n\n</b>"
-            cap+="<b><u>📚 Requested Files 👇</u></b>\n\n"
+            cap = f"<b>🔆 Hᴇʏ {message.from_user.mention}, I Fᴏᴜɴᴅ {total_results} Rᴇsᴜʟᴛs Fᴏʀ➠ {search}👇🏻\n\n</b>"
+            cap+="<b>🗨 Sᴇʟᴇᴄᴛ A Lɪɴᴋ & Pʀᴇss Sᴛᴀʀᴛ ↷</b>\n\n"
             for file in files:
                 cap += f"<b>📗 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n\n</a></b>"
     if imdb and imdb.get('poster'):
