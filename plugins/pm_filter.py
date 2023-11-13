@@ -144,9 +144,9 @@ async def next_page(bot, query):
 
         btn.insert(0, 
             [
-                InlineKeyboardButton(f'🔆Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
-                InlineKeyboardButton("🔆Lᴀɴɢᴜᴀɢᴇ🔆", callback_data=f"languages#{key}"),
-                InlineKeyboardButton("Sᴇᴀꜱᴏɴ🔆",  callback_data=f"seasons#{key}")
+                InlineKeyboardButton(f'🔆 Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
+                InlineKeyboardButton("Lᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{key}"),
+                InlineKeyboardButton("Sᴇᴀꜱᴏɴ 🔆",  callback_data=f"seasons#{key}")
             ]
         )
         btn.insert(0, [
@@ -397,18 +397,18 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'🔆Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
-                    InlineKeyboardButton("🔆Lᴀɴɢᴜᴀɢᴇ🔆", callback_data=f"languages#{key}"),
-                    InlineKeyboardButton("Sᴇᴀꜱᴏɴ🔆",  callback_data=f"seasons#{key}")
+                    InlineKeyboardButton(f'🔆 Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
+                    InlineKeyboardButton("Lᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{key}"),
+                    InlineKeyboardButton("Sᴇᴀꜱᴏɴ 🔆",  callback_data=f"seasons#{key}")
                 ]
             )
 
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'🔆Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
-                    InlineKeyboardButton("🔆Lᴀɴɢᴜᴀɢᴇ🔆", callback_data=f"languages#{key}"),
-                    InlineKeyboardButton("Sᴇᴀꜱᴏɴ🔆",  callback_data=f"seasons#{key}")
+                    InlineKeyboardButton(f'🔆 Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
+                    InlineKeyboardButton("Lᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{key}"),
+                    InlineKeyboardButton("Sᴇᴀꜱᴏɴ 🔆",  callback_data=f"seasons#{key}")
                 ]
             )
                 
@@ -416,9 +416,9 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         await save_group_settings(query.message.chat.id, 'auto_delete', True)
         btn.insert(0, 
             [
-                    InlineKeyboardButton(f'🔆Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
-                    InlineKeyboardButton("🔆Lᴀɴɢᴜᴀɢᴇ🔆", callback_data=f"languages#{key}"),
-                    InlineKeyboardButton("Sᴇᴀꜱᴏɴ🔆",  callback_data=f"seasons#{key}")
+                    InlineKeyboardButton(f'🔆 Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
+                    InlineKeyboardButton("Lᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{key}"),
+                    InlineKeyboardButton("Sᴇᴀꜱᴏɴ 🔆",  callback_data=f"seasons#{key}")
             ]
         )
 
@@ -755,18 +755,18 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'🔆Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
-                    InlineKeyboardButton("🔆Lᴀɴɢᴜᴀɢᴇ🔆", callback_data=f"languages#{key}"),
-                    InlineKeyboardButton("Sᴇᴀꜱᴏɴ🔆",  callback_data=f"seasons#{key}")
+                    InlineKeyboardButton(f'🔆 Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
+                    InlineKeyboardButton("Lᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{key}"),
+                    InlineKeyboardButton("Sᴇᴀꜱᴏɴ 🔆",  callback_data=f"seasons#{key}")
                 ]
             )
 
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'🔆Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
-                    InlineKeyboardButton("🔆Lᴀɴɢᴜᴀɢᴇ🔆", callback_data=f"languages#{key}"),
-                    InlineKeyboardButton("Sᴇᴀꜱᴏɴ🔆",  callback_data=f"seasons#{key}")
+                    InlineKeyboardButton(f'🔆 Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
+                    InlineKeyboardButton("Lᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{key}"),
+                    InlineKeyboardButton("Sᴇᴀꜱᴏɴ 🔆",  callback_data=f"seasons#{key}")
                 ]
             )
                 
@@ -774,9 +774,9 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
         await save_group_settings(query.message.chat.id, 'auto_delete', True)
         btn.insert(0, 
             [
-                    InlineKeyboardButton(f'🔆Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
-                    InlineKeyboardButton("🔆Lᴀɴɢᴜᴀɢᴇ🔆", callback_data=f"languages#{key}"),
-                    InlineKeyboardButton("Sᴇᴀꜱᴏɴ🔆",  callback_data=f"seasons#{key}")
+                    InlineKeyboardButton(f'🔆 Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
+                    InlineKeyboardButton("Lᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{key}"),
+                    InlineKeyboardButton("Sᴇᴀꜱᴏɴ 🔆",  callback_data=f"seasons#{key}")
             ]
         )
 
@@ -2130,9 +2130,9 @@ async def auto_filter(client, msg, spoll=False):
     #     ]
         btn.insert(0, 
             [
-                InlineKeyboardButton(f'🔆Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
-                InlineKeyboardButton("🔆Lᴀɴɢᴜᴀɢᴇ🔆", callback_data=f"languages#{key}"),
-                InlineKeyboardButton("Sᴇᴀꜱᴏɴ🔆",  callback_data=f"seasons#{key}")
+                InlineKeyboardButton(f'🔆 Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
+                InlineKeyboardButton("Lᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{key}"),
+                InlineKeyboardButton("Sᴇᴀꜱᴏɴ 🔆",  callback_data=f"seasons#{key}")
             ]
         )
     # if ENABLE_SHORTLINK == True:
