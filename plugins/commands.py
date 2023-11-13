@@ -265,7 +265,7 @@ async def start(client, message):
                     ], [
                         InlineKeyboardButton('⁉️ Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ ⁉️', url=await get_tutorial(chat_id))
                     ], [
-                        InlineKeyboardButton('🔆Vɪᴘ Mᴇᴍʙᴇʀsʜɪᴘ❗Nᴏ Aᴅs🔆', url=VIP_MEMBERSHIP)
+                        InlineKeyboardButton('🔆 Vɪᴘ Mᴇᴍʙᴇʀsʜɪᴘ❗Dɪʀᴇᴄᴛ Fɪʟᴇs 🔆', url=VIP_MEMBERSHIP)
                     ]
                 ]
             )
@@ -288,7 +288,7 @@ async def start(client, message):
                     ], [
                         InlineKeyboardButton('⁉️ Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ ⁉️', url=await get_tutorial(chat_id))
                     ], [
-                        InlineKeyboardButton('🔆Vɪᴘ Mᴇᴍʙᴇʀsʜɪᴘ❗Nᴏ Aᴅs🔆', url=VIP_MEMBERSHIP)
+                        InlineKeyboardButton('🔆 Vɪᴘ Mᴇᴍʙᴇʀsʜɪᴘ❗Dɪʀᴇᴄᴛ Fɪʟᴇs 🔆', url=VIP_MEMBERSHIP)
                     ]
                 ]
             )
@@ -367,7 +367,7 @@ async def start(client, message):
                         ], [
                         InlineKeyboardButton('⁉️ Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ ⁉️', url=await get_tutorial(chat_id))
                         ], [
-                        InlineKeyboardButton('🔆Vɪᴘ Mᴇᴍʙᴇʀsʜɪᴘ❗Nᴏ Aᴅs🔆', url=VIP_MEMBERSHIP)
+                        InlineKeyboardButton('🔆 Vɪᴘ Mᴇᴍʙᴇʀsʜɪᴘ❗Dɪʀᴇᴄᴛ Fɪʟᴇs 🔆', url=VIP_MEMBERSHIP)
                         ]
                     ]
                 )
