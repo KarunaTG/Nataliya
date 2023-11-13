@@ -123,7 +123,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"⚜️[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"📒[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -135,7 +135,7 @@ async def next_page(bot, query):
     #                 text=f"{' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'files#{file.file_id}'
     #             ),
     #             InlineKeyboardButton(
-    #                 text=f"{get_size(file.file_size)}",
+    #                 text=f"📘{get_size(file.file_size)}",
     #                 callback_data=f'files_#{file.file_id}',
     #             ),
     #         ]
@@ -150,7 +150,7 @@ async def next_page(bot, query):
             ]
         )
         btn.insert(0, [
-            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
+            InlineKeyboardButton("🔆 Sᴇɴᴅ Aʟʟ Fɪʟᴇs 🔆", callback_data=f"sendfiles#{key}")
         ])
     else:
         btn = []
@@ -222,12 +222,12 @@ async def next_page(bot, query):
     # if ENABLE_SHORTLINK == True:
         # btn.insert(0, [
         #     InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-        #     InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
+        #     InlineKeyboardButton("🔆 Sᴇɴᴅ Aʟʟ Fɪʟᴇs 🔆", callback_data=f"sendfiles#{key}")
         # ])
     # else:
     #     btn.insert(0, [
     #         InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-    #         InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"send_fall#{pre}#{key}#{offset}")
+    #         InlineKeyboardButton("🔆 Sᴇɴᴅ Aʟʟ Fɪʟᴇs 🔆", callback_data=f"send_fall#{pre}#{key}#{offset}")
     #     ])
     # btn.insert(0, [
     #     InlineKeyboardButton("Hᴏᴡ ᴛᴏ Dᴏᴡɴʟᴏᴀᴅ⚡", url=await get_tutorial(query.message.chat.id))
@@ -373,7 +373,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"⚜️[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"📕[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -386,7 +386,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
                     callback_data=f'{pre}#{file.file_id}',
                 ),
                 InlineKeyboardButton(
-                    text=f"{get_size(file.file_size)}",
+                    text=f"📔{get_size(file.file_size)}",
                     callback_data=f'{pre}#{file.file_id}',
                 ),
             ]
@@ -447,12 +447,12 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         )
     # if ENABLE_SHORTLINK == True:
     btn.insert(0, [
-        InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
+        InlineKeyboardButton("🔆 Sᴇɴᴅ Aʟʟ Fɪʟᴇs 🔆", callback_data=f"sendfiles#{key}")
     ])
     # else:
     #     btn.insert(0, [
     #         InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-    #         InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"send_fall#{pre}#{key}#{offset}")
+    #         InlineKeyboardButton("🔆 Sᴇɴᴅ Aʟʟ Fɪʟᴇs 🔆", callback_data=f"send_fall#{pre}#{key}#{offset}")
     #     ])
     try:
         await query.edit_message_reply_markup(
@@ -597,7 +597,7 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"⚜️[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"📕[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -610,15 +610,15 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
                     callback_data=f'{pre}#{file.file_id}',
                 ),
                 InlineKeyboardButton(
-                    text=f"{get_size(file.file_size)}",
+                    text=f"📘{get_size(file.file_size)}",
                     callback_data=f'{pre}#{file.file_id}',
                 ),
             ]
             for file in files
         ]
     btn.insert(0, [
-        InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}"),
-        InlineKeyboardButton("ꜱᴇʟᴇᴄᴛ ᴀɢᴀɪɴ", callback_data=f"seasons#{key}")
+        InlineKeyboardButton("🔆 Sᴇɴᴅ Aʟʟ Fɪʟᴇs 🔆", callback_data=f"sendfiles#{key}"),
+        InlineKeyboardButton("Sᴇʟᴇᴄᴛ Aɢᴀɪɴ", callback_data=f"seasons#{key}")
     ])
     
 
@@ -731,7 +731,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"⚜️[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"📙[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -744,7 +744,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
                     callback_data=f'{pre}#{file.file_id}',
                 ),
                 InlineKeyboardButton(
-                    text=f"{get_size(file.file_size)}",
+                    text=f"📘{get_size(file.file_size)}",
                     callback_data=f'{pre}#{file.file_id}',
                 ),
             ]
@@ -805,12 +805,12 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
         )
     # if ENABLE_SHORTLINK == True:
     btn.insert(0, [
-        InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
+        InlineKeyboardButton("🔆 Sᴇɴᴅ Aʟʟ Fɪʟᴇs 🔆", callback_data=f"sendfiles#{key}")
     ])
     # else:
     #     btn.insert(0, [
     #         InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-    #         InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"send_fall#{pre}#{key}#{offset}")
+    #         InlineKeyboardButton("🔆 Sᴇɴᴅ Aʟʟ Fɪʟᴇs 🔆", callback_data=f"send_fall#{pre}#{key}#{offset}")
     #     ])
     try:
         await query.edit_message_reply_markup(
@@ -1165,7 +1165,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 logger.exception(e)
             f_caption = f_caption
         if f_caption is None:
-            f_caption = f"⚜️{files.file_name}"
+            f_caption = f"📘{files.file_name}"
         await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
     
     elif query.data.startswith("checksub"):
@@ -2109,7 +2109,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"📕[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -2122,7 +2122,7 @@ async def auto_filter(client, msg, spoll=False):
     #                 callback_data=f'{pre}#{file.file_id}',
     #             ),
     #             InlineKeyboardButton(
-    #                 text=f"{get_size(file.file_size)}",
+    #                 text=f"📙{get_size(file.file_size)}",
     #                 callback_data=f'{pre}#{file.file_id}',
     #             ),
     #         ]
@@ -2138,7 +2138,7 @@ async def auto_filter(client, msg, spoll=False):
     # if ENABLE_SHORTLINK == True:
     #     btn.insert(0, [
     #         InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-    #         InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", url=await get_shortlink(message.chat.id, f"https://telegram.me/{temp.U_NAME}?start=allfiles_{key}")
+    #         InlineKeyboardButton("🔆 Sᴇɴᴅ Aʟʟ Fɪʟᴇs 🔆", url=await get_shortlink(message.chat.id, f"https://telegram.me/{temp.U_NAME}?start=allfiles_{key}")
     #         )
     #     ])
     # else:
@@ -2146,7 +2146,7 @@ async def auto_filter(client, msg, spoll=False):
     #         InlineKeyboardButton('❗❗  ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ  ❗❗', url="https://t.me/MoviesDuniya4U")
     #     ])
         btn.insert(0, [
-            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
+            InlineKeyboardButton("🔆 Sᴇɴᴅ Aʟʟ Fɪʟᴇs 🔆", callback_data=f"sendfiles#{key}")
         ])
     # if ENABLE_TUTORIAL == True:
     #     btn.insert(0, [
