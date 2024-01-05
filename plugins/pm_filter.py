@@ -80,7 +80,7 @@ async def pm_text(bot, message):
          reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔆 Request Group", url=f"https://t.me/TVSeriesCW/2103")]])
     )
     await bot.send_message(
-        chat_id=LOG_CHANNEL,
+        chat_id=AUTO_REQUEST,
         text=f"<b>#𝐏𝐌_𝐌𝐒𝐆\n\nNᴀᴍᴇ : {user}\n\nID : {user_id}\n\nMᴇssᴀɢᴇ : {content}</b>"
     )
 
