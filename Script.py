@@ -190,13 +190,18 @@ Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:
 /𝐟𝐢𝐧𝐝𝐬𝐭𝐢𝐜𝐤𝐞𝐫 𝐬𝐭𝐢𝐜𝐤𝐞𝐫 𝐢𝐝 𝐭𝐨 𝐬𝐭𝐢𝐜𝐤𝐞𝐫
 </b>"""
 
-    STATUS_TXT = """<b>⍟─────[ <b>Bᴏᴛ Sᴛᴀᴛᴜs</b> ]─────⍟
-    
-★ ᴛᴏᴛᴀʟ ꜰɪʟᴇꜱ : <code>{}</code>
-★ ᴛᴏᴛᴀʟ ᴜꜱᴇʀꜱ : <code>{}</code>
-★ ᴛᴏᴛᴀʟ ɢʀᴏᴜᴘꜱ : <code>{}</code>
-★ ᴜꜱᴇᴅ ꜱᴛᴏʀᴀɢᴇ: <code>{} MB</code>
-★ ꜰʀᴇᴇ ꜱᴛᴏʀᴀɢᴇ : <code>{} MB</code>
+    STATUS_TXT = """<b>Tᴏᴛᴀʟ Fɪʟᴇs Fʀᴏᴍ Bᴏᴛʜ DBs: <code>{}</code>
+Bᴏᴛ Usᴇʀs ᴀɴᴅ Cʜᴀᴛs Cᴏᴜɴᴛ
+★ Tᴏᴛᴀʟ Usᴇʀs: <code>{}</code>
+★ Tᴏᴛᴀʟ Cʜᴀᴛs: <code>{}</code>
+Pʀɪᴍᴀʀʏ Dᴀᴛᴀʙᴀsᴇ Sᴛᴀᴛɪsᴛɪᴄs 
+★ Tᴏᴛᴀʟ Fɪʟᴇs: <code>{}</code>
+★ Usᴇᴅ Sᴛᴏʀᴀɢᴇ: <code>{} MB</code>
+★ Fʀᴇᴇ Sᴛᴏʀᴀɢᴇ: <code>{} MB</code>
+Sᴇᴄᴏɴᴅᴀʀʏ Dᴀᴛᴀʙᴀsᴇ Sᴛᴀᴛɪsᴛɪᴄs
+★ Tᴏᴛᴀʟ Fɪʟᴇs: <code>{}</code>
+★ Usᴇᴅ Sᴛᴏʀᴀɢᴇ: <code>{} MB</code>
+★ Fʀᴇᴇ Sᴛᴏʀᴀɢᴇ: <code>{} MB</code>
 •❅──────✧❅✦❅✧──────❅•</b>"""
 
 
