@@ -205,12 +205,12 @@ Sᴇᴄᴏɴᴅᴀʀʏ Dᴀᴛᴀʙᴀsᴇ Sᴛᴀᴛɪsᴛɪᴄs
 •❅──────✧❅✦❅✧──────❅•</b>"""
 
 
-    LOG_TEXT_G = """<b>#NewGroup
+    LOG_TEXT_G = """<b>#NewGroup_Nataliya
 Gʀᴏᴜᴘ = {}(<code>{}</code>)
 Tᴏᴛᴀʟ Mᴇᴍʙᴇʀs = <code>{}</code>
 Aᴅᴅᴇᴅ Bʏ - {}</b>"""
 
-    LOG_TEXT_P = """<b>#NewUser
+    LOG_TEXT_P = """<b>#NewUser_Nataliya
 ID - <code>{}</code>
 Nᴀᴍᴇ - {}</b>"""
 
@@ -255,7 +255,7 @@ Check Your Spelling, Release Date, Follow Request Tips , If You Still Don't Get 
 › Flash S01E02 Hindi ✅"""
 
     NORSLTS = """
-★ #Aᴜᴛᴏ_Rᴇǫᴜᴇsᴛ ★
+★ #Aᴜᴛᴏ_Rᴇǫᴜᴇsᴛ_Nataliya ★
 
 ♦️ <b>Mᴇᴍʙᴇʀ Iᴅ</b> : `{}`
 
