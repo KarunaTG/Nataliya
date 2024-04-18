@@ -190,15 +190,16 @@ Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:
 /𝐟𝐢𝐧𝐝𝐬𝐭𝐢𝐜𝐤𝐞𝐫 𝐬𝐭𝐢𝐜𝐤𝐞𝐫 𝐢𝐝 𝐭𝐨 𝐬𝐭𝐢𝐜𝐤𝐞𝐫
 </b>"""
 
-    STATUS_TXT = """<b>Tᴏᴛᴀʟ Fɪʟᴇs Fʀᴏᴍ Bᴏᴛʜ DBs: <code>{}</code>
-Bᴏᴛ Usᴇʀs ᴀɴᴅ Cʜᴀᴛs Cᴏᴜɴᴛ
+    STATUS_TXT = """<b>★ Tᴏᴛᴀʟ Fɪʟᴇs Fʀᴏᴍ Bᴏᴛʜ DBs: <code>{}</code>
 ★ Tᴏᴛᴀʟ Usᴇʀs: <code>{}</code>
 ★ Tᴏᴛᴀʟ Cʜᴀᴛs: <code>{}</code>
-Pʀɪᴍᴀʀʏ Dᴀᴛᴀʙᴀsᴇ Sᴛᴀᴛɪsᴛɪᴄs 
+
+🎗️Pʀɪᴍᴀʀʏ Dᴀᴛᴀʙᴀsᴇ Sᴛᴀᴛɪsᴛɪᴄs 
 ★ Tᴏᴛᴀʟ Fɪʟᴇs: <code>{}</code>
 ★ Usᴇᴅ Sᴛᴏʀᴀɢᴇ: <code>{} MB</code>
 ★ Fʀᴇᴇ Sᴛᴏʀᴀɢᴇ: <code>{} MB</code>
-Sᴇᴄᴏɴᴅᴀʀʏ Dᴀᴛᴀʙᴀsᴇ Sᴛᴀᴛɪsᴛɪᴄs
+
+🎗️Sᴇᴄᴏɴᴅᴀʀʏ Dᴀᴛᴀʙᴀsᴇ Sᴛᴀᴛɪsᴛɪᴄs
 ★ Tᴏᴛᴀʟ Fɪʟᴇs: <code>{}</code>
 ★ Usᴇᴅ Sᴛᴏʀᴀɢᴇ: <code>{} MB</code>
 ★ Fʀᴇᴇ Sᴛᴏʀᴀɢᴇ: <code>{} MB</code>
@@ -257,11 +258,9 @@ Check Your Spelling, Release Date, Follow Request Tips , If You Still Don't Get 
     NORSLTS = """
 ★ #Aᴜᴛᴏ_Rᴇǫᴜᴇsᴛ_Nataliya ★
 
-♦️ <b>Mᴇᴍʙᴇʀ Iᴅ</b> : `{}`
-
-🔷 <b>Rᴇǫᴜᴇsᴛᴇᴅ Bʏ</b> : `{}`
-
-🔆 <b>Rᴇǫᴜᴇsᴛᴇᴅ Fɪʟᴇ</b> : 🎗`{}`🎗"""
+📕 <b>Mᴇᴍʙᴇʀ Iᴅ</b> : `{}`
+📘 <b>Rᴇǫᴜᴇsᴛᴇᴅ Bʏ</b> : `{}`
+📙 <b>Rᴇǫᴜᴇsᴛᴇᴅ Fɪʟᴇ</b> : `{}`"""
 
     CAPTION = """
 🎗<b>[{file_name}](https://t.me/+3cfeesNk_cg3MGQ9)</b>🎗 \n\n🔆 <i><b>Movies Group » [@HeavenOfMovies](https://t.me/+zMweRQDyPpo2Yjhl)</i></b> \n🔆 <b><i>Series Group » [@HeavenOfSeries](https://t.me/+6q0f6-TYbA85ZjM1)</b></i>"""
