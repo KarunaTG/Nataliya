@@ -206,12 +206,12 @@ Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:
 •❅──────✧❅✦❅✧──────❅•</b>"""
 
 
-    LOG_TEXT_G = """<b>#NewGroup_Nataliya
+    LOG_TEXT_G = """<b>#NewGroup_Rubina
 Gʀᴏᴜᴘ = {}(<code>{}</code>)
 Tᴏᴛᴀʟ Mᴇᴍʙᴇʀs = <code>{}</code>
 Aᴅᴅᴇᴅ Bʏ - {}</b>"""
 
-    LOG_TEXT_P = """<b>#NewUser_Nataliya
+    LOG_TEXT_P = """<b>#NewUser_Rubina
 ID - <code>{}</code>
 Nᴀᴍᴇ - {}</b>"""
 
@@ -256,7 +256,7 @@ Check Your Spelling, Release Date, Follow Request Tips , If You Still Don't Get 
 › Flash S01E02 Hindi ✅"""
 
     NORSLTS = """
-★ #Aᴜᴛᴏ_Rᴇǫᴜᴇsᴛ_Nataliya ★
+★ #Aᴜᴛᴏ_Rᴇǫᴜᴇsᴛ_Rubina ★
 
 📕 <b>Mᴇᴍʙᴇʀ Iᴅ</b> : `{}`
 📘 <b>Rᴇǫᴜᴇsᴛᴇᴅ Bʏ</b> : `{}`
