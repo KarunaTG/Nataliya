@@ -263,7 +263,7 @@ Check Your Spelling, Release Date, Follow Request Tips , If You Still Don't Get 
 📙 <b>Rᴇǫᴜᴇsᴛᴇᴅ Fɪʟᴇ</b> : `{}`"""
 
     CAPTION = """
-🎗<b>[{file_name}](https://t.me/+3cfeesNk_cg3MGQ9)</b>🎗 \n\n🔆 <i><b>Movies Group » [@HeavenOfMovies](https://t.me/+zMweRQDyPpo2Yjhl)</i></b> \n🔆 <b><i>Series Group » [@HeavenOfSeries](https://t.me/+6q0f6-TYbA85ZjM1)</b></i>"""
+🎗<b>[{file_name}](https://t.me/+OCmSf2DPyus2ZWQ1)</b>🎗"""
     IMDB_TEMPLATE_TXT = """
 <b><i>🎗️ {title} {year}\n━━━━━━━━━━━━━━\n🎭 Gᴇɴʀᴇ » {genres}\n⭐Rᴀᴛɪɴɢ » {rating}/10\n♦️ Sᴛᴏʀʏ » {plot}\n🕹️ Cᴀsᴛ » {cast}\n🧩 Rᴜɴᴛɪᴍᴇ » {runtime} Mɪɴs\n•──────────────•\n🔆彡[ @TVSeriesCW ]彡🔆</b></i>"""
     
