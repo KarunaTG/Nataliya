@@ -15,16 +15,16 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '2229357'))
 API_HASH = environ.get('API_HASH', '31f183a5a075fd4996cb8ad59e7b794f')
-BOT_TOKEN = environ.get('BOT_TOKEN', "5456936845:AAGC3G9ZWsKRNRIC0zO2NbJEcxVwSY3Jibk")
+BOT_TOKEN = environ.get('BOT_TOKEN', "5425847881:AAF-vNcW1Hjl_s8THDUurrcjS9ePMEfPb_I")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 1800))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
-PICS = (environ.get('PICS', 'https://graph.org/file/2d98bc7fd21faa3578af3.jpg https://graph.org/file/13001261b0ec4e3b7e88c.jpg https://graph.org/file/eccc10c43a3f1a3724999.jpg https://graph.org/file/cecb9bd0f368862f8f9be.jpg https://graph.org/file/182b04c00869949324bcf.jpg https://graph.org/file/17bcfc6388a35e9d36729.jpg https://graph.org/file/f710e0c322cdf4bd77f62.jpg https://graph.org/file/f6cedfdb62ac609c7b7f9.jpg https://graph.org/file/05de921c6afb83d68639d.jpg https://graph.org/file/ed5502db4842822978779.jpg https://graph.org/file/80ad291b955cbf4efee13.jpg https://graph.org/file/05b4a29369c263e645013.jpg https://graph.org/file/bbde34d18b19fc17152f1.jpg https://graph.org/file/bfd9c4426c3829534d5f5.jpg https://graph.org/file/65068693efdd46aedc40c.jpg')).split()
-NOR_IMG = environ.get("NOR_IMG", "https://te.legra.ph/file/7b22c0b70c00db3106b2c.jpg")
-MELCOW_VID = environ.get("MELCOW_VID", "https://telegra.ph/file/451f038b4e7c2ddd10dc0.mp4")
-SPELL_IMG = environ.get("SPELL_IMG", "https://te.legra.ph/file/4fa98ec48a8bf90c758f1.jpg")
+PICS = (environ.get('PICS', 'https://te.legra.ph/file/10cf9c67c0d5ef3c2ead9.jpg https://te.legra.ph/file/d44d6cc936d906f0071bc.jpg https://te.legra.ph/file/8a5213082d552d95fd8b7.jpg https://te.legra.ph/file/3ca6d7da7fbc91ec7bdcd.jpg https://te.legra.ph/file/d4cfc088ca6f5d56df31c.jpg https://te.legra.ph/file/4a06d75e21ffd98872de6.jpg https://te.legra.ph/file/1cf3c65a9298a2c1ff2a1.jpg https://te.legra.ph/file/b1b03f922126008e15067.jpg https://te.legra.ph/file/273c416ccfc668da889b6.jpg https://te.legra.ph/file/306f3000cf595472df2f5.jpg https://te.legra.ph/file/b5094d4beca34929c4603.jpg https://te.legra.ph/file/239d4386d9af51fad47e2.jpg https://te.legra.ph/file/ab1a1c9d09c435c30748f.jpg https://te.legra.ph/file/7a9b2b453530311fd0f2f.jpg https://te.legra.ph/file/f5f3afb0f7f077ff2a6ab.jpg https://te.legra.ph/file/3f1ef429fb3d423e5e6f7.jpg https://te.legra.ph/file/53e8129d1fa398b42442d.jpg https://te.legra.ph/file/c711ef8b4027b30729c16.jpg https://te.legra.ph/file/d771aaa61a24622590637.jpg https://te.legra.ph/file/dfc6471e7fbc8a6eefec6.jpg https://te.legra.ph/file/8786af668cb9759d02075.jpg https://te.legra.ph/file/cd309c362f3c51cf6215a.jpg https://te.legra.ph/file/8c453e04aa52f70104d2f.jpg https://te.legra.ph/file/877c45feb170c27147edd.jpg https://te.legra.ph/file/dbeef1a216c1bac247cda.jpg https://te.legra.ph/file/81450af52f9c93a495f1f.jpg https://te.legra.ph/file/72e308459d239f5824bf1.jpg https://te.legra.ph/file/73c7443606cb896716445.jpg https://te.legra.ph/file/23c162a43981592f9c6e5.jpg https://te.legra.ph/file/9c086a0780f863c094cbd.jpg https://te.legra.ph/file/4b82ce29383c614eaf0b0.jpg https://te.legra.ph/file/4794471cc79f90494ba31.jpg https://te.legra.ph/file/f475bb950100047dfd9c3.jpg https://te.legra.ph/file/cdc3670be8b7291adccfd.jpg https://te.legra.ph/file/6c774764602e9b19236b5.jpg https://te.legra.ph/file/b0bf592defba934048930.jpg https://te.legra.ph/file/1759614f1de92fa19b4c4.jpg https://te.legra.ph/file/336dc215072241afb185d.jpg https://te.legra.ph/file/63fede32e135bbe8ca7b9.jpg https://te.legra.ph/file/e4ae49d67321c4d5c7684.jpg https://te.legra.ph/file/bed4a846e33e7fcbbcec9.jpg https://te.legra.ph/file/ca38bcbf4b9b21c3511f9.jpg https://te.legra.ph/file/e23f6637565bffa6af327.jpg https://te.legra.ph/file/6fcd23d181eb988be7d65.jpg https://te.legra.ph/file/f1694893cb4c856ba9156.jpg https://te.legra.ph/file/dc3bd62c7f8627c2eece4.jpg')).split()
+NOR_IMG = environ.get("NOR_IMG", "https://te.legra.ph/file/dc3bd62c7f8627c2eece4.jpg")
+MELCOW_VID = environ.get("MELCOW_VID", "https://te.legra.ph/file/6c774764602e9b19236b5.jpg")
+SPELL_IMG = environ.get("SPELL_IMG", "https://te.legra.ph/file/6c774764602e9b19236b5.jpg")
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '794968418').split()]
@@ -40,13 +40,12 @@ support_chat_id = environ.get('SUPPORT_CHAT_ID', '')
 reqst_channel = environ.get('REQST_CHANNEL_ID', '')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
-NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", True))
+NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://karunamajeegames2:MwkceSptcImlmOov@cluster.4upztey.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://natashamajee:PpWbAa03XOygSpu7@cluster.q8yyke6.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
-SECONDDB_URI = environ.get('SECONDDB_URI', "mongodb+srv://Karuna:15122000@cluster0.hrtev.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
@@ -54,25 +53,25 @@ SHORTLINK_URL = environ.get('SHORTLINK_URL', 'easysky.in')
 SHORTLINK_API = environ.get('SHORTLINK_API', '546326320a3c0a8fdc061f56ca40972e1e35682f')
 SECOND_SHORTLINK_URL = environ.get('SECOND_SHORTLINK_URL', 'easysky.in')
 SECOND_SHORTLINK_API = environ.get('SECOND_SHORTLINK_API', 'c0c9fb160a5d33bb141ce117e2cce939a36a9682')
-IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
-DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1002081411946').split()]
+IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
+DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "10")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+zMweRQDyPpo2Yjhl')
-MOVIE_GROUP = environ.get('MOVIE_GROUP', 'https://t.me/+HeoPTc1IeFg5NDc1')
-SERIES_GROUP = environ.get('SERIES_GROUP', 'https://t.me/+q3y3G8RmrudmNzll')
-MAIN_CHANNEL = environ.get('MAIN_CHANNEL', 'https://t.me/TVSeriesCW')
-VIP_MEMBERSHIP = environ.get('VIP_MEMBERSHIP', 'https://t.me/MrperfectOffcial/39')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/TVSeriesCW')
-TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Verify_Toturial')
-IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
-MSG_ALRT = environ.get('MSG_ALRT', 'TVSeriesCW Best Channel In Telegram🚩')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+IzoiHCBItzY4NTI1')
+MOVIE_GROUP = environ.get('MOVIE_GROUP', 'https://t.me/+IzoiHCBItzY4NTI1')
+SERIES_GROUP = environ.get('SERIES_GROUP', 'https://t.me/+IzoiHCBItzY4NTI1')
+MAIN_CHANNEL = environ.get('MAIN_CHANNEL', 'https://t.me/Rubina_Updates')
+VIP_MEMBERSHIP = environ.get('VIP_MEMBERSHIP', 'https://t.me/Rubina_Updates')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/Rubina_Updates')
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Rubina_Updates')
+IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', False))
+MSG_ALRT = environ.get('MSG_ALRT', 'Who Is Your Favourite Pornstar')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001500025641'))
 AUTO_REQUEST = int(environ.get('AUTO_REQUEST', '-1001820924316'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
-IMDB = is_enabled((environ.get('IMDB', "True")), True)
+IMDB = is_enabled((environ.get('IMDB', "False")), False)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
@@ -85,7 +84,7 @@ MAX_LIST_ELM = environ.get("MAX_LIST_ELM", "4")
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
 FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).split()]
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "False")), False)
-PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
+PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "True")), True)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
 
 QUALITIES = ["360p", "480p", "720p", "1080p", "1440p", "2160p"]
