@@ -76,8 +76,8 @@ async def pm_text(bot, message):
     if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
     if user_id in ADMINS: return # ignore admins
     await message.reply_text(
-         text=f"<b>🎗 If You Want Any Movie, Series Please Join Our Request Group Below 👇🏻</b>",   
-         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔆 Request Group", url=f"https://t.me/TVSeriesCW/2103")]])
+         text=f"<b>🎗 If You Want Any Files Please Join Our Request Group Below 👇🏻</b>",   
+         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔆 Request Group", url=f"https://t.me/Rubina_Updates")]])
     )
     await bot.send_message(
         chat_id=AUTO_REQUEST,
