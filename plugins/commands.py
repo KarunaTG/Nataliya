@@ -50,14 +50,11 @@ async def start(client, message):
                     InlineKeyboardButton('Vɪᴘ Mᴇᴍʙᴇʀsʜɪᴘ🌀', url=VIP_MEMBERSHIP)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await message.reply_text("👀")
-        await asyncio.sleep(1)
-        await m.delete()
         m=await message.reply_text("⚡")
         await asyncio.sleep(1)
         await m.delete()
         m=await message.reply_sticker("CAACAgUAAxkBAAEKryFlRmcR5uIta374YeU0qWGpl9pU2gACMgsAAgdt8FR9xcT0MTT_EzME") 
-        await asyncio.sleep(1)
+        await asyncio.sleep(3)
         await m.delete()
         await message.reply_photo(
             photo=random.choice(PICS),
