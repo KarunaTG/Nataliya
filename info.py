@@ -51,7 +51,7 @@ SECONDDB_URI = environ.get('SECONDDB_URI', "")
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'easysky.in')
-SHORTLINK_API = environ.get('SHORTLINK_API', '546326320a3c0a8fdc061f56ca40972e1e35682f')
+SHORTLINK_API = environ.get('SHORTLINK_API', 'c0c9fb160a5d33bb141ce117e2cce939a36a9682')
 SECOND_SHORTLINK_URL = environ.get('SECOND_SHORTLINK_URL', 'easysky.in')
 SECOND_SHORTLINK_API = environ.get('SECOND_SHORTLINK_API', 'c0c9fb160a5d33bb141ce117e2cce939a36a9682')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
