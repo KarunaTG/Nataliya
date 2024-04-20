@@ -15,7 +15,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '2229357'))
 API_HASH = environ.get('API_HASH', '31f183a5a075fd4996cb8ad59e7b794f')
-BOT_TOKEN = environ.get('BOT_TOKEN', "5456936845:AAGC3G9ZWsKRNRIC0zO2NbJEcxVwSY3Jibk")
+BOT_TOKEN = environ.get('BOT_TOKEN', "1862447115:AAHQcOTbE1BEdtGqoe_voVZrtye63c-rMD8")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 1800))
@@ -43,10 +43,10 @@ SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", True))
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://karunamajeegames2:MwkceSptcImlmOov@cluster.4upztey.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://shieldbot:Karuna100@cluster0.kx6zz.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
-SECONDDB_URI = environ.get('SECONDDB_URI', "mongodb+srv://Karuna:15122000@cluster0.hrtev.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+SECONDDB_URI = environ.get('SECONDDB_URI', "")
 
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
