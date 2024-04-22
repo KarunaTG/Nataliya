@@ -1,5 +1,5 @@
 class script(object):
-    START_TXT = """<b> Hey {}, I'm <a href=https://telegram.me/{}>{}</a> &amp; I Can Provide XxX Videos And Porn Movies &amp; Series, If You're Not 18+ Delete This Chat Right Now</b>"""
+    START_TXT = """<b> Hey {}, I'm <a href=https://telegram.me/{}>{}</a> &amp; I Can Provide XxX Videos And Porn Movies &amp; Series, You Can Use Me Inline Or Send Any Video/Pornstar Name In My PM, If You're Not 18+ Delete This Chat Right Now</b>"""
 
     HELP_TXT = """<b>Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.</b>"""
  
