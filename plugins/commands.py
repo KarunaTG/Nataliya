@@ -47,7 +47,7 @@ async def start(client, message):
                     InlineKeyboardButton('Sᴇʀɪᴇs Gʀᴏᴜᴘ🔆', url=SERIES_GROUP)
                 ],[
                     InlineKeyboardButton('🌀Mᴀɪɴ Cʜᴀɴɴᴇʟ', url=MAIN_CHANNEL),
-                    InlineKeyboardButton('Vɪᴘ Mᴇᴍʙᴇʀsʜɪᴘ🌀', url=VIP_MEMBERSHIP)
+                    InlineKeyboardButton('Iɴʟɪɴᴇ Sᴇᴀʀᴄʜ ☌', switch_inline_query_current_chat='')
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         m=await message.reply_text("👀")
@@ -95,7 +95,7 @@ async def start(client, message):
                     InlineKeyboardButton('Sᴇʀɪᴇs Gʀᴏᴜᴘ🔆', url=SERIES_GROUP)
                 ],[
                     InlineKeyboardButton('🌀Mᴀɪɴ Cʜᴀɴɴᴇʟ', url=MAIN_CHANNEL),
-                    InlineKeyboardButton('Vɪᴘ Mᴇᴍʙᴇʀsʜɪᴘ🌀', url=VIP_MEMBERSHIP)
+                    InlineKeyboardButton('Iɴʟɪɴᴇ Sᴇᴀʀᴄʜ ☌', switch_inline_query_current_chat='')
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)      
         await message.reply_photo(
