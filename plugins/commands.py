@@ -77,9 +77,9 @@ async def start(client, message):
         if message.command[1] != "subscribe":
             try:
                 kk, file_id = message.command[1].split("_", 1)
-                btn.append([InlineKeyboardButton('🔆 TVSeriesCW 🔆', url=MAIN_CHANNEL)])
+                btn.append([InlineKeyboardButton('🔆 Rubina Updates 🔆', url=MAIN_CHANNEL)])
             except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton('🔆 TVSeriesCW 🔆', url=MAIN_CHANNEL)])
+                btn.append([InlineKeyboardButton('🔆 Rubina Updates 🔆', url=MAIN_CHANNEL)])
         await client.send_message(
             chat_id=message.from_user.id,
             text="**🔆 Join Our Main Channel & Then Request Again in Group ♻ \n\n🔆 हमारे मैन चैनल से जुड़ें और फिर ग्रुप में दोबारा रिक्वेस्ट करें ♻**",
