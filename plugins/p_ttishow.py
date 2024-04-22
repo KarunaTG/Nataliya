@@ -41,7 +41,7 @@ async def save_group(bot, message):
                     InlineKeyboardButton('Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url=MOVIE_GROUP),
                     InlineKeyboardButton('Sᴇʀɪᴇs Gʀᴏᴜᴘ', url=SERIES_GROUP)
                  ],[
-                    InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/MrperfectOffcial_bot")
+                    InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/Rubina_Updates")
                   ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -64,7 +64,7 @@ async def save_group(bot, message):
                                                                            InlineKeyboardButton('Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url=MOVIE_GROUP),
                                                                            InlineKeyboardButton('Sᴇʀɪᴇs Gʀᴏᴜᴘ', url=SERIES_GROUP)
                                                                         ],[
-                                                                           InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/MrperfectOffcial_bot")
+                                                                           InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/Rubina_Updates")
                                                                          ]]
                                                  ),
                                                  parse_mode=enums.ParseMode.HTML
