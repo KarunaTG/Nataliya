@@ -150,7 +150,7 @@ async def next_page(bot, query):
             ]
         )
         btn.insert(0, [
-            InlineKeyboardButton("🔆 Sᴇɴᴅ Aʟʟ Fɪʟᴇs 🔆", callback_data=f"sendfiles#{key}")
+            InlineKeyboardButton("🔆 Rᴜʙɪɴᴀ Uᴘᴅᴀᴛᴇs 🔆", url=f"https://telegram.me/Rubina_Updates")
         ])
     else:
         btn = []
@@ -222,12 +222,12 @@ async def next_page(bot, query):
     # if ENABLE_SHORTLINK == True:
         # btn.insert(0, [
         #     InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-        #     InlineKeyboardButton("🔆 Sᴇɴᴅ Aʟʟ Fɪʟᴇs 🔆", callback_data=f"sendfiles#{key}")
+        #     InlineKeyboardButton("🔆 Rᴜʙɪɴᴀ Uᴘᴅᴀᴛᴇs 🔆", url=f"https://telegram.me/Rubina_Updates")
         # ])
     # else:
     #     btn.insert(0, [
     #         InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-    #         InlineKeyboardButton("🔆 Sᴇɴᴅ Aʟʟ Fɪʟᴇs 🔆", callback_data=f"send_fall#{pre}#{key}#{offset}")
+    #         InlineKeyboardButton("🔆 Rᴜʙɪɴᴀ Uᴘᴅᴀᴛᴇs 🔆", url=f"https://telegram.me/Rubina_Updates")
     #     ])
     # btn.insert(0, [
     #     InlineKeyboardButton("Hᴏᴡ ᴛᴏ Dᴏᴡɴʟᴏᴀᴅ⚡", url=await get_tutorial(query.message.chat.id))
@@ -447,11 +447,11 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         )
     # if ENABLE_SHORTLINK == True:
     btn.insert(0, [
-        InlineKeyboardButton("🔆 Sᴇɴᴅ Aʟʟ Fɪʟᴇs 🔆", callback_data=f"sendfiles#{key}")
+        InlineKeyboardButton("🔆 Rᴜʙɪɴᴀ Uᴘᴅᴀᴛᴇs 🔆", url=f"https://telegram.me/Rubina_Updates")
     ])
     # else:
     #     btn.insert(0, [
-    #         InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
+    #         InlineKeyboardButton("🔆 Rᴜʙɪɴᴀ Uᴘᴅᴀᴛᴇs 🔆", url=f"https://telegram.me/Rubina_Updates"),
     #         InlineKeyboardButton("🔆 Sᴇɴᴅ Aʟʟ Fɪʟᴇs 🔆", callback_data=f"send_fall#{pre}#{key}#{offset}")
     #     ])
     try:
@@ -617,7 +617,7 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
             for file in files
         ]
     btn.insert(0, [
-        InlineKeyboardButton("🔆 Sᴇɴᴅ Aʟʟ Fɪʟᴇs 🔆", callback_data=f"sendfiles#{key}"),
+        InlineKeyboardButton("🔆 Rᴜʙɪɴᴀ Uᴘᴅᴀᴛᴇs 🔆", url=f"https://telegram.me/Rubina_Updates"),
         InlineKeyboardButton("Sᴇʟᴇᴄᴛ Aɢᴀɪɴ", callback_data=f"seasons#{key}")
     ])
     
@@ -805,12 +805,12 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
         )
     # if ENABLE_SHORTLINK == True:
     btn.insert(0, [
-        InlineKeyboardButton("🔆 Sᴇɴᴅ Aʟʟ Fɪʟᴇs 🔆", callback_data=f"sendfiles#{key}")
+        InlineKeyboardButton("🔆 Rᴜʙɪɴᴀ Uᴘᴅᴀᴛᴇs 🔆", url=f"https://telegram.me/Rubina_Updates")
     ])
     # else:
     #     btn.insert(0, [
     #         InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-    #         InlineKeyboardButton("🔆 Sᴇɴᴅ Aʟʟ Fɪʟᴇs 🔆", callback_data=f"send_fall#{pre}#{key}#{offset}")
+    #         InlineKeyboardButton("🔆 Rᴜʙɪɴᴀ Uᴘᴅᴀᴛᴇs 🔆", url=f"https://telegram.me/Rubina_Updates")
     #     ])
     try:
         await query.edit_message_reply_markup(
@@ -2157,7 +2157,7 @@ async def auto_filter(client, msg, spoll=False):
     # if ENABLE_SHORTLINK == True:
     #     btn.insert(0, [
     #         InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-    #         InlineKeyboardButton("🔆 Sᴇɴᴅ Aʟʟ Fɪʟᴇs 🔆", url=await get_shortlink(message.chat.id, f"https://telegram.me/{temp.U_NAME}?start=allfiles_{key}")
+    #         InlineKeyboardButton("🔆 Rᴜʙɪɴᴀ Uᴘᴅᴀᴛᴇs 🔆", url=f"https://telegram.me/Rubina_Updates")
     #         )
     #     ])
     # else:
@@ -2165,7 +2165,7 @@ async def auto_filter(client, msg, spoll=False):
     #         InlineKeyboardButton('❗❗  ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ  ❗❗', url="https://t.me/MoviesDuniya4U")
     #     ])
         btn.insert(0, [
-            InlineKeyboardButton("🔆 Sᴇɴᴅ Aʟʟ Fɪʟᴇs 🔆", callback_data=f"sendfiles#{key}")
+            InlineKeyboardButton("🔆 Rᴜʙɪɴᴀ Uᴘᴅᴀᴛᴇs 🔆", url=f"https://telegram.me/Rubina_Updates")
         ])
     # if ENABLE_TUTORIAL == True:
     #     btn.insert(0, [
