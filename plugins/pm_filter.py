@@ -451,8 +451,8 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
     ])
     # else:
     #     btn.insert(0, [
-    #         InlineKeyboardButton("🔆 Rᴜʙɪɴᴀ Uᴘᴅᴀᴛᴇs 🔆", url=f"https://telegram.me/Rubina_Updates"),
-    #         InlineKeyboardButton("🔆 Sᴇɴᴅ Aʟʟ Fɪʟᴇs 🔆", callback_data=f"send_fall#{pre}#{key}#{offset}")
+    #         InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
+    #         InlineKeyboardButton("🔆 Rᴜʙɪɴᴀ Uᴘᴅᴀᴛᴇs 🔆", url=f"https://telegram.me/Rubina_Updates")
     #     ])
     try:
         await query.edit_message_reply_markup(
