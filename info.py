@@ -50,10 +50,10 @@ SECONDDB_URI = environ.get('SECONDDB_URI', "mongodb+srv://shieldbot:Karuna100@cl
 
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'tnshort.net')
-SHORTLINK_API = environ.get('SHORTLINK_API', '35740dcc6c2a808be526806338ba29f5f759968a')
-SECOND_SHORTLINK_URL = environ.get('SECOND_SHORTLINK_URL', 'tnshort.net')
-SECOND_SHORTLINK_API = environ.get('SECOND_SHORTLINK_API', '35740dcc6c2a808be526806338ba29f5f759968a')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'easysky.in')
+SHORTLINK_API = environ.get('SHORTLINK_API', 'c0c9fb160a5d33bb141ce117e2cce939a36a9682')
+SECOND_SHORTLINK_URL = environ.get('SECOND_SHORTLINK_URL', 'easysky.in')
+SECOND_SHORTLINK_API = environ.get('SECOND_SHORTLINK_API', 'c0c9fb160a5d33bb141ce117e2cce939a36a9682')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1002081411946').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "10")
