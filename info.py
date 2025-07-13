@@ -50,8 +50,8 @@ SECONDDB_URI = environ.get('SECONDDB_URI', "mongodb+srv://karunamajeegames2:Mwkc
 
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'gplinks.com')
-SHORTLINK_API = environ.get('SHORTLINK_API', '585ee87eae9c3f497dce24aebebef3ec7700f977')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'tnshort.net')
+SHORTLINK_API = environ.get('SHORTLINK_API', '35740dcc6c2a808be526806338ba29f5f759968a')
 SECOND_SHORTLINK_URL = environ.get('SECOND_SHORTLINK_URL', 'gplinks.com')
 SECOND_SHORTLINK_API = environ.get('SECOND_SHORTLINK_API', '585ee87eae9c3f497dce24aebebef3ec7700f977')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
