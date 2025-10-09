@@ -46,7 +46,7 @@ NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", True))
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Karuna:15122000@cluster0.hrtev.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Nataliya_files')
-SECONDDB_URI = environ.get('SECONDDB_URI', "mongodb+srv://karunamajeegames2:MwkceSptcImlmOov@cluster.4upztey.mongodb.net/?retryWrites=true&w=majority")
+SECONDDB_URI = environ.get('SECONDDB_URI', "mongodb+srv://shieldbot:Karuna100@cluster0.kx6zz.mongodb.net/?retryWrites=true&w=majority")
 
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
